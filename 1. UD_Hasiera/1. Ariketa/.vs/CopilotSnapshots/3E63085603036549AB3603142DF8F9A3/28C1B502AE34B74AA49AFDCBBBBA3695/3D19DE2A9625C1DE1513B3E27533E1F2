@@ -1,0 +1,26 @@
+﻿<Window x:Class="_1._Ariketak.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_1._Ariketak"
+        mc:Ignorable="d"
+        Title="Cálculo de fórmula matemática" Height="450" Width="800">
+    <Grid RenderTransformOrigin="0.473,0.516" Margin="0,0,0,-6">
+        <Label Content="Primer Número" HorizontalAlignment="Left" Height="27" Margin="90,43,0,0" VerticalAlignment="Top" Width="110" Foreground="DarkRed"/>
+        <Label Content="Segundo Número" HorizontalAlignment="Left" Height="27" Margin="90,94,0,0" VerticalAlignment="Top" Width="110" Foreground="DarkRed"/>
+        <Label Content="Tercer Número" HorizontalAlignment="Left" Height="28" Margin="90,152,0,0" VerticalAlignment="Top" Width="110" Foreground="DarkRed"/>
+        <Label Content="Cuarto Número" HorizontalAlignment="Left" Height="27" Margin="90,210,0,0" VerticalAlignment="Top" Width="110" Foreground="DarkRed"/>
+        <Label Content="RESULTADO" HorizontalAlignment="Left" Height="26" Margin="90,294,0,0" VerticalAlignment="Top" Width="110" Foreground="DarkBlue"/>
+
+        <TextBox Name="PrimerNumero" HorizontalAlignment="Left" Height="27" Margin="346,43,0,0" VerticalAlignment="Top" Width="330" PreviewTextInput="ValidarEntradaNumerica"/>
+        <TextBox Name="SegundoNumero" HorizontalAlignment="Left" Height="27" Margin="346,94,0,0" VerticalAlignment="Top" Width="330" PreviewTextInput="ValidarEntradaNumerica"/>
+        <TextBox Name="TercerNumero" HorizontalAlignment="Left" Height="28" Margin="346,152,0,0" VerticalAlignment="Top" Width="330" PreviewTextInput="ValidarEntradaNumerica"/>
+        <TextBox Name="CuartoNumero" HorizontalAlignment="Left" Height="27" Margin="346,210,0,0" VerticalAlignment="Top" Width="330" PreviewTextInput="ValidarEntradaNumerica"/>
+        <TextBox Name="Resultado" HorizontalAlignment="Left" Height="27" Margin="346,294,0,0" VerticalAlignment="Top" Width="330" IsReadOnly="True"/>
+
+        <Button Content="Operar" HorizontalAlignment="Left" Margin="105,388,0,0" VerticalAlignment="Top" Click="Operar"/>
+        <Button Content="Limpiar" HorizontalAlignment="Left" Margin="346,388,0,0" VerticalAlignment="Top" Click="Limpiar"/>
+        <Button Content="Salir" HorizontalAlignment="Left" Margin="633,388,0,0" VerticalAlignment="Top" Click="Salir"/>
+    </Grid>
+</Window>

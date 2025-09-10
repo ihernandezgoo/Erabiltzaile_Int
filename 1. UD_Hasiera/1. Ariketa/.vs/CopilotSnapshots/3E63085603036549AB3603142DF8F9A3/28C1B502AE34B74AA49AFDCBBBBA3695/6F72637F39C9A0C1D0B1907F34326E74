@@ -1,0 +1,25 @@
+﻿<Window x:Class="_1._Ariketak.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_1._Ariketak"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid RenderTransformOrigin="0.473,0.516" Margin="0,0,0,-6">
+        <Label Content="PRIMER NUMERO" HorizontalAlignment="Left" Height="27" Margin="90,43,0,0" VerticalAlignment="Top" Width="110"/>
+        <Label Content="SEGUNDO NUMERO" HorizontalAlignment="Left" Height="27" Margin="90,94,0,0" VerticalAlignment="Top" Width="110"/>
+        <Label Content="TERCER NUMERO" HorizontalAlignment="Left" Height="28" Margin="90,152,0,0" VerticalAlignment="Top" Width="110"/>
+        <Label Content="CUARTO NUMERO" HorizontalAlignment="Left" Height="27" Margin="90,0,0,0" VerticalAlignment="Center" Width="110"/>
+        <Label Content="RESULTADO" HorizontalAlignment="Left" Height="26" Margin="90,294,0,0" VerticalAlignment="Top" Width="110" RenderTransformOrigin="0.968,0.705"/>
+        <Rectangle HorizontalAlignment="Left" Height="27" Margin="346,43,0,0" Stroke="Black" VerticalAlignment="Top" Width="330"/>
+        <Rectangle HorizontalAlignment="Left" Height="27" Margin="346,94,0,0" Stroke="Black" VerticalAlignment="Top" Width="330"/>
+        <Rectangle HorizontalAlignment="Left" Height="28" Margin="346,152,0,0" Stroke="Black" VerticalAlignment="Top" Width="330"/>
+        <Rectangle HorizontalAlignment="Left" Height="27" Margin="346,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="330"/>
+        <Rectangle HorizontalAlignment="Left" Height="27" Margin="346,293,0,0" Stroke="Black" VerticalAlignment="Top" Width="330"/>
+        <Button Content="Operar" HorizontalAlignment="Left" Margin="105,388,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Button Content="Operar" HorizontalAlignment="Left" Margin="346,388,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Button Content="Limpiar" HorizontalAlignment="Left" Margin="346,388,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Button Content="Salir" HorizontalAlignment="Left" Margin="633,388,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+    </Grid>
+</Window>
