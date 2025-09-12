@@ -1,0 +1,21 @@
+﻿<Window x:Class="_5._Ariketa.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_5._Ariketa"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBlock x:Name="Testua1" Text="FROGAKO TESTUA" HorizontalAlignment="Center" Margin="0,56,0,0" VerticalAlignment="Top" FontSize="20"/>
+
+        <Button x:Name="ComicSansButton" Content="Comic Sans" HorizontalAlignment="Left" Margin="50,124,0,0" VerticalAlignment="Top" Click="ComicsSans"/>
+        <Button x:Name="NegritaButton" Content="Negrita" HorizontalAlignment="Left" Margin="150,124,0,0" VerticalAlignment="Top" Click="Negrita"/>
+        <Button x:Name="TachadoButton" Content="Tachado" HorizontalAlignment="Left" Margin="250,124,0,0" VerticalAlignment="Top" Click="Tachado"/>
+        <Button x:Name="TamañoMasButton" Content="+ Tamaño" HorizontalAlignment="Left" Margin="350,124,0,0" VerticalAlignment="Top" Click="TamañoMas"/>
+        <Button x:Name="TamañoMenosButton" Content="- Tamaño" HorizontalAlignment="Left" Margin="450,124,0,0" VerticalAlignment="Top" Click="TamañoMenos"/>
+        <Button x:Name="CourtierButton" Content="Courtier" HorizontalAlignment="Left" Margin="550,124,0,0" VerticalAlignment="Top" Click="Courtier"/>
+        <Button x:Name="CursivaButton" Content="Cursiva" HorizontalAlignment="Left" Margin="650,124,0,0" VerticalAlignment="Top" Click="Cursiva"/>
+        <Button x:Name="SubrayadoButton" Content="Subrayado" HorizontalAlignment="Left" Margin="750,124,0,0" VerticalAlignment="Top" Click="Subrayado"/>
+    </Grid>
+</Window>
