@@ -1,0 +1,21 @@
+D:\Erabiltzaile_Interfazeak\1. UD_Hasiera\6. Ariketa\6. Ariketa\obj\Debug\net8.0-windows\MainWindow.g.cs
+D:\Erabiltzaile_Interfazeak\1. UD_Hasiera\6. Ariketa\6. Ariketa\obj\Debug\net8.0-windows\App.g.cs
+D:\Erabiltzaile_Interfazeak\1. UD_Hasiera\6. Ariketa\6. Ariketa\obj\Debug\net8.0-windows\6. Ariketa_MarkupCompile.cache
+D:\Erabiltzaile_Interfazeak\1. UD_Hasiera\6. Ariketa\6. Ariketa\obj\Debug\net8.0-windows\6. Ariketa_MarkupCompile.lref
+D:\Erabiltzaile_Interfazeak\1. UD_Hasiera\6. Ariketa\6. Ariketa\bin\Debug\net8.0-windows\6. Ariketa.exe
+D:\Erabiltzaile_Interfazeak\1. UD_Hasiera\6. Ariketa\6. Ariketa\bin\Debug\net8.0-windows\6. Ariketa.deps.json
+D:\Erabiltzaile_Interfazeak\1. UD_Hasiera\6. Ariketa\6. Ariketa\bin\Debug\net8.0-windows\6. Ariketa.runtimeconfig.json
+D:\Erabiltzaile_Interfazeak\1. UD_Hasiera\6. Ariketa\6. Ariketa\bin\Debug\net8.0-windows\6. Ariketa.dll
+D:\Erabiltzaile_Interfazeak\1. UD_Hasiera\6. Ariketa\6. Ariketa\bin\Debug\net8.0-windows\6. Ariketa.pdb
+D:\Erabiltzaile_Interfazeak\1. UD_Hasiera\6. Ariketa\6. Ariketa\obj\Debug\net8.0-windows\MainWindow.baml
+D:\Erabiltzaile_Interfazeak\1. UD_Hasiera\6. Ariketa\6. Ariketa\obj\Debug\net8.0-windows\6. Ariketa.g.resources
+D:\Erabiltzaile_Interfazeak\1. UD_Hasiera\6. Ariketa\6. Ariketa\obj\Debug\net8.0-windows\6. Ariketa.GeneratedMSBuildEditorConfig.editorconfig
+D:\Erabiltzaile_Interfazeak\1. UD_Hasiera\6. Ariketa\6. Ariketa\obj\Debug\net8.0-windows\6. Ariketa.AssemblyInfoInputs.cache
+D:\Erabiltzaile_Interfazeak\1. UD_Hasiera\6. Ariketa\6. Ariketa\obj\Debug\net8.0-windows\6. Ariketa.AssemblyInfo.cs
+D:\Erabiltzaile_Interfazeak\1. UD_Hasiera\6. Ariketa\6. Ariketa\obj\Debug\net8.0-windows\6. Ariketa.csproj.CoreCompileInputs.cache
+D:\Erabiltzaile_Interfazeak\1. UD_Hasiera\6. Ariketa\6. Ariketa\obj\Debug\net8.0-windows\6. Ariketa.sourcelink.json
+D:\Erabiltzaile_Interfazeak\1. UD_Hasiera\6. Ariketa\6. Ariketa\obj\Debug\net8.0-windows\6. Ariketa.dll
+D:\Erabiltzaile_Interfazeak\1. UD_Hasiera\6. Ariketa\6. Ariketa\obj\Debug\net8.0-windows\refint\6. Ariketa.dll
+D:\Erabiltzaile_Interfazeak\1. UD_Hasiera\6. Ariketa\6. Ariketa\obj\Debug\net8.0-windows\6. Ariketa.pdb
+D:\Erabiltzaile_Interfazeak\1. UD_Hasiera\6. Ariketa\6. Ariketa\obj\Debug\net8.0-windows\6. Ariketa.genruntimeconfig.cache
+D:\Erabiltzaile_Interfazeak\1. UD_Hasiera\6. Ariketa\6. Ariketa\obj\Debug\net8.0-windows\ref\6. Ariketa.dll
