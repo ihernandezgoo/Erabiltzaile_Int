@@ -14,27 +14,27 @@
         </Grid.ColumnDefinitions>
         <TextBox x:Name="Erantzuna" Grid.Column="2" HorizontalAlignment="Left" Margin="257,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180"/>
 
-        <Button x:Name="_1" Grid.Column="2" Content="1" HorizontalAlignment="Left" Margin="257,104,0,0" VerticalAlignment="Top" Height="20" Width="20"/>
-        <Button x:Name="_2" Grid.Column="2" Content="2" HorizontalAlignment="Left" Margin="297,104,0,0" VerticalAlignment="Top" Height="20" Width="20"/>
-        <Button x:Name="_3" Grid.Column="2" Content="3" HorizontalAlignment="Left" Margin="337,104,0,0" VerticalAlignment="Top" Height="20" Width="20"/>
-        <Button x:Name="_4" Grid.Column="2" Content="4" HorizontalAlignment="Left" Margin="257,144,0,0" VerticalAlignment="Top" Height="20" Width="20"/>
-        <Button x:Name="_5" Grid.Column="2" Content="5" HorizontalAlignment="Left" Margin="297,144,0,0" VerticalAlignment="Top" Height="20" Width="20"/>
-        <Button x:Name="_6" Grid.Column="2" Content="6" HorizontalAlignment="Left" Margin="337,144,0,0" VerticalAlignment="Top" Height="20" Width="20"/>
-        <Button x:Name="_7" Grid.Column="2" Content="7" HorizontalAlignment="Left" Margin="257,184,0,0" VerticalAlignment="Top" Height="20" Width="20"/>
-        <Button x:Name="_8" Grid.Column="2" Content="8" HorizontalAlignment="Left" Margin="297,184,0,0" VerticalAlignment="Top" Height="20" Width="20"/>
-        <Button x:Name="_9" Grid.Column="2" Content="9" HorizontalAlignment="Left" Margin="337,184,0,0" VerticalAlignment="Top" Height="20" Width="20"/>
-        <Button x:Name="_0" Grid.Column="2" Content="0" HorizontalAlignment="Left" Margin="257,224,0,0" VerticalAlignment="Top" Height="20" Width="60"/>
+        <Button x:Name="_1" Grid.Column="2" Content="1" HorizontalAlignment="Left" Margin="257,104,0,0" VerticalAlignment="Top" Height="20" Width="20" Click="Button_Click"/>
+        <Button x:Name="_2" Grid.Column="2" Content="2" HorizontalAlignment="Left" Margin="297,104,0,0" VerticalAlignment="Top" Height="20" Width="20" Click="Button_Click"/>
+        <Button x:Name="_3" Grid.Column="2" Content="3" HorizontalAlignment="Left" Margin="337,104,0,0" VerticalAlignment="Top" Height="20" Width="20" Click="Button_Click"/>
+        <Button x:Name="_4" Grid.Column="2" Content="4" HorizontalAlignment="Left" Margin="257,144,0,0" VerticalAlignment="Top" Height="20" Width="20" Click="Button_Click"/>
+        <Button x:Name="_5" Grid.Column="2" Content="5" HorizontalAlignment="Left" Margin="297,144,0,0" VerticalAlignment="Top" Height="20" Width="20" Click="Button_Click"/>
+        <Button x:Name="_6" Grid.Column="2" Content="6" HorizontalAlignment="Left" Margin="337,144,0,0" VerticalAlignment="Top" Height="20" Width="20" Click="Button_Click"/>
+        <Button x:Name="_7" Grid.Column="2" Content="7" HorizontalAlignment="Left" Margin="257,184,0,0" VerticalAlignment="Top" Height="20" Width="20" Click="Button_Click"/>
+        <Button x:Name="_8" Grid.Column="2" Content="8" HorizontalAlignment="Left" Margin="297,184,0,0" VerticalAlignment="Top" Height="20" Width="20" Click="Button_Click"/>
+        <Button x:Name="_9" Grid.Column="2" Content="9" HorizontalAlignment="Left" Margin="337,184,0,0" VerticalAlignment="Top" Height="20" Width="20" Click="Button_Click"/>
+        <Button x:Name="_0" Grid.Column="2" Content="0" HorizontalAlignment="Left" Margin="257,224,0,0" VerticalAlignment="Top" Height="20" Width="60" Click="Button_Click"/>
 
-        <Button x:Name="punto1" Grid.Column="2" Content="." HorizontalAlignment="Left" Margin="337,224,0,0" VerticalAlignment="Top" Height="20" Width="20"/>
-        <Button x:Name="C" Grid.Column="2" Content="C" HorizontalAlignment="Left" Margin="377,104,0,0" VerticalAlignment="Top" Height="20" Width="20"/>
-        <Button x:Name="CE" Grid.Column="2" Content="CE" HorizontalAlignment="Left" Margin="417,104,0,0" VerticalAlignment="Top" Height="20" Width="20"/>
+        <Button x:Name="punto1" Grid.Column="2" Content="." HorizontalAlignment="Left" Margin="337,224,0,0" VerticalAlignment="Top" Height="20" Width="20" Click="Button_Click"/>
+        <Button x:Name="C" Grid.Column="2" Content="C" HorizontalAlignment="Left" Margin="377,104,0,0" VerticalAlignment="Top" Height="20" Width="20" Click="C_Click"/>
+        <Button x:Name="CE" Grid.Column="2" Content="CE" HorizontalAlignment="Left" Margin="417,104,0,0" VerticalAlignment="Top" Height="20" Width="20" Click="CE_Click"/>
 
-        <Button x:Name="zati" Grid.Column="2" Content="/" HorizontalAlignment="Left" Margin="377,144,0,0" VerticalAlignment="Top" Height="20" Width="20"/>
-        <Button x:Name="ken" Grid.Column="2" Content="-" HorizontalAlignment="Left" Margin="417,144,0,0" VerticalAlignment="Top" Height="20" Width="20"/>
-        <Button x:Name="bider" Grid.Column="2" Content="*" HorizontalAlignment="Left" Margin="377,184,0,0" VerticalAlignment="Top" Height="20" Width="20"/>
-        <Button x:Name="gei" Grid.Column="2" Content="+" HorizontalAlignment="Left" Margin="417,184,0,0" VerticalAlignment="Top" Height="20" Width="20"/>
-        <Button x:Name="berdin" Grid.Column="2" Content="=" HorizontalAlignment="Left" Margin="377,224,0,0" VerticalAlignment="Top" Height="20" Width="20"/>
-        <Button x:Name="ehuneko" Grid.Column="2" Content="%" HorizontalAlignment="Left" Margin="417,224,0,0" VerticalAlignment="Top" Height="20" Width="20"/>
+        <Button x:Name="zati" Grid.Column="2" Content="/" HorizontalAlignment="Left" Margin="377,144,0,0" VerticalAlignment="Top" Height="20" Width="20" Click="Button_Click"/>
+        <Button x:Name="ken" Grid.Column="2" Content="-" HorizontalAlignment="Left" Margin="417,144,0,0" VerticalAlignment="Top" Height="20" Width="20" Click="Button_Click"/>
+        <Button x:Name="bider" Grid.Column="2" Content="*" HorizontalAlignment="Left" Margin="377,184,0,0" VerticalAlignment="Top" Height="20" Width="20" Click="Button_Click"/>
+        <Button x:Name="gei" Grid.Column="2" Content="+" HorizontalAlignment="Left" Margin="417,184,0,0" VerticalAlignment="Top" Height="20" Width="20" Click="Button_Click"/>
+        <Button x:Name="berdin" Grid.Column="2" Content="=" HorizontalAlignment="Left" Margin="377,224,0,0" VerticalAlignment="Top" Height="20" Width="20" Click="Berdin_Click"/>
+        <Button x:Name="ehuneko" Grid.Column="2" Content="%" HorizontalAlignment="Left" Margin="417,224,0,0" VerticalAlignment="Top" Height="20" Width="20" Click="Button_Click"/>
 
     </Grid>
 </Window>
