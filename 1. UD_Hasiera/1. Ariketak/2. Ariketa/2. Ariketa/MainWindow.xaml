@@ -1,0 +1,21 @@
+﻿<Window x:Class="_2._Ariketa.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Frases" Height="500" Width="500"
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+
+    <Canvas Margin="10">
+        
+        <TextBox x:Name="TextBoxFrase" Width="260" Height="25" Canvas.Left="110" Canvas.Top="46"/>
+
+        <Button x:Name="Btn_Frase1" Content="Frase1" Canvas.Left="110" Canvas.Top="106" Click="Btn_Frase1_Click"/>
+        <Button x:Name="Btn_Frase2" Content="Frase2" Canvas.Left="221" Canvas.Top="106" HorizontalAlignment="Left" VerticalAlignment="Center" Click="Btn_Frase2_Click"/>
+        <Button x:Name="Btn_Frase3" Content="Frase3" Canvas.Left="332" Canvas.Top="106" HorizontalAlignment="Left" VerticalAlignment="Center" Click="Btn_Frase3_Click"/>
+        <Button x:Name="Btn_Frase4" Content="Frase4" Canvas.Left="110" Canvas.Top="163" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Btn_Frase4_Click"/>
+        <Button x:Name="Btn_Frase5" Content="Frase5" Canvas.Left="221" Canvas.Top="163" HorizontalAlignment="Left" VerticalAlignment="Center" Click="Btn_Frase5_Click"/>
+        <Button x:Name="Unir" Content="Unir" Canvas.Left="332" Canvas.Top="163" HorizontalAlignment="Left" VerticalAlignment="Center" Click="Btn_Unir"/>
+        
+        <Button Content="Limpiar" Canvas.Left="110" Canvas.Top="222" HorizontalAlignment="Left" VerticalAlignment="Center" Width="260" Click="Limpiar"/>
+        <Button Content="Salir" Canvas.Left="110" Canvas.Top="259" Width="260" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Salir"/>
+    </Canvas>
+</Window>
