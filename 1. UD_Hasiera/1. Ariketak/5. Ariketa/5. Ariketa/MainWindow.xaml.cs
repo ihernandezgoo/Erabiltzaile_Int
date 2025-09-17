@@ -52,5 +52,17 @@ namespace _5._Ariketa
         {
             Testua1.TextDecorations = TextDecorations.Underline;
         }
+
+        private void SelectText(object sender, RoutedEventArgs e)
+        {
+            string selectedText = EditableTextBox.SelectedText;
+            int totalLength = EditableTextBox.Text.Length;
+            InfoLabel.Content = $"El texto tiene {totalLength} caracteres, y el texto seleccionado es: {selectedText}";
+        }
+
+        private void ExitApplication(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }
