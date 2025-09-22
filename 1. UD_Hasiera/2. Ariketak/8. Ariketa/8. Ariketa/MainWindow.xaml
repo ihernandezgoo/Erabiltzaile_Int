@@ -1,0 +1,22 @@
+﻿<Window x:Class="SimpleDateApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="1. Ariketa" Height="300" Width="700">
+    <Canvas Margin="290,0,10,0">
+        <Label Content="Gaur" Canvas.Left="-60" Canvas.Top="45" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Label Content="Orain" Canvas.Left="-60" Canvas.Top="10" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Label Content="Gaurko ordua" Canvas.Left="-84" Canvas.Top="80" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Label Content="Datak gehituta" Canvas.Left="-84" Canvas.Top="115" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Label Content="Egun kopuru diferentzia" Canvas.Left="-138" Canvas.Top="150" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        
+        <TextBox x:Name="txtAhora" Width="380" Height="25" Canvas.Left="10" Canvas.Top="10" />
+        <TextBox x:Name="txtHoy" Width="380" Height="25" Canvas.Left="10" Canvas.Top="45" />
+        <TextBox x:Name="txtHoraHoy" Width="380" Height="25" Canvas.Left="10" Canvas.Top="80" />
+        <TextBox x:Name="txtSumaFechas" Width="380" Height="25" Canvas.Left="10" Canvas.Top="115" />
+        <TextBox x:Name="txtDiferenciaFechas" Width="380" Height="25" Canvas.Left="10" Canvas.Top="150" />
+
+        <Button Content="Ejekutatu" Width="100" Height="30" Canvas.Left="10" Canvas.Top="200" Click="btnEjecutar_Click"/>
+        <Button Content="Garbitu" Width="100" Height="30" Canvas.Left="150" Canvas.Top="200" Click="btnLimpiar_Click"/>
+        <Button Content="Atera" Width="100" Height="30" Canvas.Left="290" Canvas.Top="200" Click="btnSalir_Click"/>
+    </Canvas>
+</Window>
