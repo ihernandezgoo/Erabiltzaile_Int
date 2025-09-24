@@ -1,0 +1,26 @@
+﻿<Window x:Class="_10._Ariketa.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_10._Ariketa"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label Content="NIRE ARGAZKIAK" HorizontalAlignment="Center" Margin="0,21,0,0" VerticalAlignment="Top" FontSize="25px"/>
+
+        <Label Content="1. Fila" HorizontalAlignment="Left" Margin="80,93,0,0" VerticalAlignment="Top"/>
+        <Label Content="2. Fila" HorizontalAlignment="Left" Margin="80,249,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="ImagenComboBox" HorizontalAlignment="Left" Margin="80,124,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="Fila1ComboBox">
+            <ComboBoxItem Content="Imagen 1"/>
+            <ComboBoxItem Content="Imagen 2"/>
+            <ComboBoxItem Content="Imagen 3"/>
+        </ComboBox>
+        <Image x:Name="SeleccionImagen" HorizontalAlignment="Left" Height="100" Margin="250,124,0,0" VerticalAlignment="Top" Width="150"/>
+
+        <Button Content="Atera" HorizontalAlignment="Left" Margin="570,404,0,0" VerticalAlignment="Top" Width="150" Click="Atera"/>
+        <Canvas>
+            <Canvas Height="434" Width="800"/>
+        </Canvas>
+    </Grid>
+</Window>
