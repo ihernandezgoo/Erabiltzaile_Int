@@ -11,7 +11,7 @@ namespace _11._Ariketa
 
         private void Onartu_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Datuak gorde dira (opcional).");
+            MessageBox.Show("Datuak gorde dira.");
         }
 
         private void Begiratu_Click(object sender, RoutedEventArgs e)
