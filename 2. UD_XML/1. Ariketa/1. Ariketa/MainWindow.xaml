@@ -1,0 +1,28 @@
+﻿<Window x:Class="AtazaKudeatzailea.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Ataza Kudeatzailea" Height="450" Width="800">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <DataGrid x:Name="TareasDataGrid" AutoGenerateColumns="False" CanUserAddRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Izenburua" Binding="{Binding Titulua}" Width="*"/>
+                <DataGridTextColumn Header="Lehentasuna" Binding="{Binding Lehentasuna}" Width="100"/>
+                <DataGridTextColumn Header="Muga-eguna" Binding="{Binding AzkenEguna, StringFormat=d}" Width="120"/>
+                <DataGridCheckBoxColumn Header="Eginda" Binding="{Binding Eginda, Mode=TwoWay}" Width="80"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!-- Botoiak -->
+        <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center" Margin="0,10,0,0">
+            <Button Content="Gehitu" Click="Gehitu_Click" Width="100" Margin="5,0,5,0"/>
+            <Button Content="Editatu" Click="Editatu_Click" Width="100" Margin="5,0,5,0"/>
+            <Button Content="Ezabatu" Click="Ezabatu_Click" Width="100" Margin="5,0,5,0"/>
+            <Button Content="Irten" Click="Irten_Click" Width="100" Margin="5,0,5,0"/>
+        </StackPanel>
+    </Grid>
+</Window>
