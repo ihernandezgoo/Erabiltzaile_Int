@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
 using System.Windows;
 using System.Xml.Linq;
 
@@ -105,7 +103,7 @@ namespace AtazaKudeatzailea
             {
                 Id = Tareas.Any() ? Tareas.Max(x => x.Id) + 1 : 1,
                 Titulua = "Izenburu berria",
-                Lehentasuna = "Baxua",
+                Lehentasuna = "Ertaina",
                 AzkenEguna = DateTime.Today,
                 Egoera = "Egin gabe"
             };
