@@ -1,0 +1,59 @@
+﻿<Window x:Class="LekuErreserbaSistema.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LekuErreserbaSistema"
+        mc:Ignorable="d"
+        Title="Leku Erreserba Sistema Anitza" Height="600" Width="800">
+
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- 0. errenkada: Goiko kontrolak -->
+            <RowDefinition Height="*"/>
+            <!-- 1. errenkada: Eserlekuen panela (espazio guztia hartuko du) -->
+            <RowDefinition Height="Auto"/>
+            <!-- 2. errenkada: Beheko botoia -->
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,15">
+
+            <Label Content="Garraio Mota:" VerticalAlignment="Center" FontWeight="Bold"/>
+
+            <ComboBox x:Name="garraioMotaComboBox" 
+                      Width="150" 
+                      Margin="5" 
+                      VerticalContentAlignment="Center"
+                      SelectionChanged="GarraioMotaComboBox_SelectionChanged">
+                <ComboBoxItem Content="Autobusa"/>
+                <ComboBoxItem Content="Trena"/>
+                <ComboBoxItem Content="Hegazkina"/>
+            </ComboBox>
+
+            <Label Content="Erreserba Data:" VerticalAlignment="Center" FontWeight="Bold" Margin="30,0,0,0"/>
+
+            <DatePicker x:Name="erreserbaDatePicker" 
+                        Width="150" 
+                        Margin="5" 
+                        VerticalContentAlignment="Center"/>
+
+        </StackPanel>
+
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" BorderBrush="Gray" BorderThickness="1">
+            <Grid x:Name="eserlekuenGrid" Background="#FFE5E5E5" Margin="10"/>
+        </ScrollViewer>
+
+        <Button x:Name="erreserbatuButton" 
+                Grid.Row="2" 
+                Content="Erreserbatu Hautatutakoak" 
+                HorizontalAlignment="Center" 
+                Margin="0,15,0,0" 
+                Padding="15,8" 
+                FontSize="14" 
+                FontWeight="Bold" 
+                Background="#FF4CAF50" 
+                Foreground="White"
+                Click="ErreserbatuButton_Click"/>
+    </Grid>
+</Window>

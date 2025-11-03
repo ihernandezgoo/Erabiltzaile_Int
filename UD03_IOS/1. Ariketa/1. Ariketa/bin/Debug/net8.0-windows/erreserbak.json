@@ -1,0 +1,32 @@
+[
+  {
+    "ErreserbaId": "74c24055-8905-4172-a1d1-96334410c20c",
+    "ErabiltzaileIzena": "Proba Erabiltzailea",
+    "GarraioMota": "Autobusa",
+    "EserlekuakId": [
+      "3A",
+      "3B"
+    ],
+    "ErreserbaData": "2025-11-05T00:00:00"
+  },
+  {
+    "ErreserbaId": "b9be0fea-e67f-4cd1-bfa0-c3cb782757b5",
+    "ErabiltzaileIzena": "Proba Erabiltzailea",
+    "GarraioMota": "Autobusa",
+    "EserlekuakId": [
+      "1A",
+      "1B"
+    ],
+    "ErreserbaData": "2025-11-03T00:00:00"
+  },
+  {
+    "ErreserbaId": "08cd84b5-952d-4bc9-b4fb-d1bea6fc45e3",
+    "ErabiltzaileIzena": "Proba Erabiltzailea",
+    "GarraioMota": "Autobusa",
+    "EserlekuakId": [
+      "1C",
+      "1D"
+    ],
+    "ErreserbaData": "2025-11-03T00:00:00+01:00"
+  }
+]
