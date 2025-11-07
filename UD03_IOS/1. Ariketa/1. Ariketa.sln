@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36414.22 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1. Ariketa", "1. Ariketa\1. Ariketa.csproj", "{783D0FF6-D00F-4B9C-B733-16FC0349B4EC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1. Ariketa", "1. Ariketa\1. Ariketa.csproj", "{3D8C6C5E-0683-4D40-AE2F-B6B7EA7ACECA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{783D0FF6-D00F-4B9C-B733-16FC0349B4EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{783D0FF6-D00F-4B9C-B733-16FC0349B4EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{783D0FF6-D00F-4B9C-B733-16FC0349B4EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{783D0FF6-D00F-4B9C-B733-16FC0349B4EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D8C6C5E-0683-4D40-AE2F-B6B7EA7ACECA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D8C6C5E-0683-4D40-AE2F-B6B7EA7ACECA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D8C6C5E-0683-4D40-AE2F-B6B7EA7ACECA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D8C6C5E-0683-4D40-AE2F-B6B7EA7ACECA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {09F21761-98CB-4A4C-810B-B2AF181B3B61}
+		SolutionGuid = {DCD7726C-4521-461B-9F09-76B7D8CB6C77}
 	EndGlobalSection
 EndGlobal

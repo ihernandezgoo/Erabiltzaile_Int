@@ -1,0 +1,188 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Erabiltzaile_Interfazeak\\UD03_IOS\\1. Ariketa\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3D8C6C5E-0683-4D40-AE2F-B6B7EA7ACECA}|1. Ariketa\\1. Ariketa.csproj|d:\\erabiltzaile_interfazeak\\ud03_ios\\1. ariketa\\1. ariketa\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3D8C6C5E-0683-4D40-AE2F-B6B7EA7ACECA}|1. Ariketa\\1. Ariketa.csproj|solutionrelative:1. ariketa\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D8C6C5E-0683-4D40-AE2F-B6B7EA7ACECA}|1. Ariketa\\1. Ariketa.csproj|d:\\erabiltzaile_interfazeak\\ud03_ios\\1. ariketa\\1. ariketa\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D8C6C5E-0683-4D40-AE2F-B6B7EA7ACECA}|1. Ariketa\\1. Ariketa.csproj|solutionrelative:1. ariketa\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D8C6C5E-0683-4D40-AE2F-B6B7EA7ACECA}|1. Ariketa\\1. Ariketa.csproj|d:\\erabiltzaile_interfazeak\\ud03_ios\\1. ariketa\\1. ariketa\\models\\hegazkina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D8C6C5E-0683-4D40-AE2F-B6B7EA7ACECA}|1. Ariketa\\1. Ariketa.csproj|solutionrelative:1. ariketa\\models\\hegazkina.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D8C6C5E-0683-4D40-AE2F-B6B7EA7ACECA}|1. Ariketa\\1. Ariketa.csproj|d:\\erabiltzaile_interfazeak\\ud03_ios\\1. ariketa\\1. ariketa\\models\\trena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D8C6C5E-0683-4D40-AE2F-B6B7EA7ACECA}|1. Ariketa\\1. Ariketa.csproj|solutionrelative:1. ariketa\\models\\trena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D8C6C5E-0683-4D40-AE2F-B6B7EA7ACECA}|1. Ariketa\\1. Ariketa.csproj|d:\\erabiltzaile_interfazeak\\ud03_ios\\1. ariketa\\1. ariketa\\models\\autobusa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D8C6C5E-0683-4D40-AE2F-B6B7EA7ACECA}|1. Ariketa\\1. Ariketa.csproj|solutionrelative:1. ariketa\\models\\autobusa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D8C6C5E-0683-4D40-AE2F-B6B7EA7ACECA}|1. Ariketa\\1. Ariketa.csproj|d:\\erabiltzaile_interfazeak\\ud03_ios\\1. ariketa\\1. ariketa\\models\\garraioa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D8C6C5E-0683-4D40-AE2F-B6B7EA7ACECA}|1. Ariketa\\1. Ariketa.csproj|solutionrelative:1. ariketa\\models\\garraioa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D8C6C5E-0683-4D40-AE2F-B6B7EA7ACECA}|1. Ariketa\\1. Ariketa.csproj|d:\\erabiltzaile_interfazeak\\ud03_ios\\1. ariketa\\1. ariketa\\services\\datuenkudeatzailea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D8C6C5E-0683-4D40-AE2F-B6B7EA7ACECA}|1. Ariketa\\1. Ariketa.csproj|solutionrelative:1. ariketa\\services\\datuenkudeatzailea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D8C6C5E-0683-4D40-AE2F-B6B7EA7ACECA}|1. Ariketa\\1. Ariketa.csproj|d:\\erabiltzaile_interfazeak\\ud03_ios\\1. ariketa\\1. ariketa\\models\\erreserba.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D8C6C5E-0683-4D40-AE2F-B6B7EA7ACECA}|1. Ariketa\\1. Ariketa.csproj|solutionrelative:1. ariketa\\models\\erreserba.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D8C6C5E-0683-4D40-AE2F-B6B7EA7ACECA}|1. Ariketa\\1. Ariketa.csproj|d:\\erabiltzaile_interfazeak\\ud03_ios\\1. ariketa\\1. ariketa\\controls\\seatcontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D8C6C5E-0683-4D40-AE2F-B6B7EA7ACECA}|1. Ariketa\\1. Ariketa.csproj|solutionrelative:1. ariketa\\controls\\seatcontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D8C6C5E-0683-4D40-AE2F-B6B7EA7ACECA}|1. Ariketa\\1. Ariketa.csproj|d:\\erabiltzaile_interfazeak\\ud03_ios\\1. ariketa\\1. ariketa\\controls\\seatcontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3D8C6C5E-0683-4D40-AE2F-B6B7EA7ACECA}|1. Ariketa\\1. Ariketa.csproj|solutionrelative:1. ariketa\\controls\\seatcontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\Erabiltzaile_Interfazeak\\UD03_IOS\\1. Ariketa\\1. Ariketa\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "1. Ariketa\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\Erabiltzaile_Interfazeak\\UD03_IOS\\1. Ariketa\\1. Ariketa\\MainWindow.xaml.cs",
+              "RelativeToolTip": "1. Ariketa\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T12:16:17.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Hegazkina.cs",
+              "DocumentMoniker": "D:\\Erabiltzaile_Interfazeak\\UD03_IOS\\1. Ariketa\\1. Ariketa\\Models\\Hegazkina.cs",
+              "RelativeDocumentMoniker": "1. Ariketa\\Models\\Hegazkina.cs",
+              "ToolTip": "D:\\Erabiltzaile_Interfazeak\\UD03_IOS\\1. Ariketa\\1. Ariketa\\Models\\Hegazkina.cs",
+              "RelativeToolTip": "1. Ariketa\\Models\\Hegazkina.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T12:16:01.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Trena.cs",
+              "DocumentMoniker": "D:\\Erabiltzaile_Interfazeak\\UD03_IOS\\1. Ariketa\\1. Ariketa\\Models\\Trena.cs",
+              "RelativeDocumentMoniker": "1. Ariketa\\Models\\Trena.cs",
+              "ToolTip": "D:\\Erabiltzaile_Interfazeak\\UD03_IOS\\1. Ariketa\\1. Ariketa\\Models\\Trena.cs",
+              "RelativeToolTip": "1. Ariketa\\Models\\Trena.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T12:15:57.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Garraioa.cs",
+              "DocumentMoniker": "D:\\Erabiltzaile_Interfazeak\\UD03_IOS\\1. Ariketa\\1. Ariketa\\Models\\Garraioa.cs",
+              "RelativeDocumentMoniker": "1. Ariketa\\Models\\Garraioa.cs",
+              "ToolTip": "D:\\Erabiltzaile_Interfazeak\\UD03_IOS\\1. Ariketa\\1. Ariketa\\Models\\Garraioa.cs",
+              "RelativeToolTip": "1. Ariketa\\Models\\Garraioa.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T12:15:48.03Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DatuenKudeatzailea.cs",
+              "DocumentMoniker": "D:\\Erabiltzaile_Interfazeak\\UD03_IOS\\1. Ariketa\\1. Ariketa\\Services\\DatuenKudeatzailea.cs",
+              "RelativeDocumentMoniker": "1. Ariketa\\Services\\DatuenKudeatzailea.cs",
+              "ToolTip": "D:\\Erabiltzaile_Interfazeak\\UD03_IOS\\1. Ariketa\\1. Ariketa\\Services\\DatuenKudeatzailea.cs",
+              "RelativeToolTip": "1. Ariketa\\Services\\DatuenKudeatzailea.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T12:15:42.53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Erreserba.cs",
+              "DocumentMoniker": "D:\\Erabiltzaile_Interfazeak\\UD03_IOS\\1. Ariketa\\1. Ariketa\\Models\\Erreserba.cs",
+              "RelativeDocumentMoniker": "1. Ariketa\\Models\\Erreserba.cs",
+              "ToolTip": "D:\\Erabiltzaile_Interfazeak\\UD03_IOS\\1. Ariketa\\1. Ariketa\\Models\\Erreserba.cs",
+              "RelativeToolTip": "1. Ariketa\\Models\\Erreserba.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T12:15:36.58Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SeatControl.xaml.cs",
+              "DocumentMoniker": "D:\\Erabiltzaile_Interfazeak\\UD03_IOS\\1. Ariketa\\1. Ariketa\\Controls\\SeatControl.xaml.cs",
+              "RelativeDocumentMoniker": "1. Ariketa\\Controls\\SeatControl.xaml.cs",
+              "ToolTip": "D:\\Erabiltzaile_Interfazeak\\UD03_IOS\\1. Ariketa\\1. Ariketa\\Controls\\SeatControl.xaml.cs",
+              "RelativeToolTip": "1. Ariketa\\Controls\\SeatControl.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T12:15:28.726Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SeatControl.xaml",
+              "DocumentMoniker": "D:\\Erabiltzaile_Interfazeak\\UD03_IOS\\1. Ariketa\\1. Ariketa\\Controls\\SeatControl.xaml",
+              "RelativeDocumentMoniker": "1. Ariketa\\Controls\\SeatControl.xaml",
+              "ToolTip": "D:\\Erabiltzaile_Interfazeak\\UD03_IOS\\1. Ariketa\\1. Ariketa\\Controls\\SeatControl.xaml",
+              "RelativeToolTip": "1. Ariketa\\Controls\\SeatControl.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-07T12:15:17.63Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\Erabiltzaile_Interfazeak\\UD03_IOS\\1. Ariketa\\1. Ariketa\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "1. Ariketa\\MainWindow.xaml",
+              "ToolTip": "D:\\Erabiltzaile_Interfazeak\\UD03_IOS\\1. Ariketa\\1. Ariketa\\MainWindow.xaml",
+              "RelativeToolTip": "1. Ariketa\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-07T12:14:01.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Autobusa.cs",
+              "DocumentMoniker": "D:\\Erabiltzaile_Interfazeak\\UD03_IOS\\1. Ariketa\\1. Ariketa\\Models\\Autobusa.cs",
+              "RelativeDocumentMoniker": "1. Ariketa\\Models\\Autobusa.cs",
+              "ToolTip": "D:\\Erabiltzaile_Interfazeak\\UD03_IOS\\1. Ariketa\\1. Ariketa\\Models\\Autobusa.cs",
+              "RelativeToolTip": "1. Ariketa\\Models\\Autobusa.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T12:13:16.404Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
