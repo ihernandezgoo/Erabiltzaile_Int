@@ -1,0 +1,17 @@
+<Window x:Class="TPV.AdminChoiceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Aukeratu Modua" Height="250" Width="350"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid Margin="20">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+
+            <TextBlock Text="Aukeratu sarrera-modua" FontSize="18" Margin="0,0,0,20" HorizontalAlignment="Center"/>
+
+            <Button Content="Modu Normala" Width="200" Height="40" Margin="0,0,0,10" Click="UserMode_Click"/>
+            <Button Content="Modu Admin" Width="200" Height="40" Click="AdminMode_Click"/>
+
+        </StackPanel>
+    </Grid>
+</Window>

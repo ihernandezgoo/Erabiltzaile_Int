@@ -1,0 +1,43 @@
+﻿<Window x:Class="TPV.TPVView.tpv"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="TPV" Height="600" Width="900"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid Background="#EFEFEF">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Fila superior -->
+            <RowDefinition Height="*"/>
+            <!-- Contenido -->
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <!-- Usuario -->
+            <ColumnDefinition Width="Auto"/>
+            <!-- Botón -->
+        </Grid.ColumnDefinitions>
+
+        <!-- Label de usuario -->
+        <TextBlock x:Name="lblUser"
+                   Text="Erabiltzailea"
+                   FontSize="20"
+                   VerticalAlignment="Center"
+                   Margin="20,20,0,20"
+                   Grid.Row="0" Grid.Column="0"/>
+
+        <!-- Botón Logout -->
+        <Button x:Name="btnLogout"
+                Content="Irten"
+                Width="100"
+                Height="30"
+                Margin="0,20,20,20"
+                Grid.Row="0" Grid.Column="1"
+                Click="btnLogout_Click"/>
+
+        <!-- Aquí podrías poner el contenido principal -->
+        <Grid Grid.Row="1" Grid.ColumnSpan="2">
+            <!-- contenido -->
+        </Grid>
+    </Grid>
+</Window>

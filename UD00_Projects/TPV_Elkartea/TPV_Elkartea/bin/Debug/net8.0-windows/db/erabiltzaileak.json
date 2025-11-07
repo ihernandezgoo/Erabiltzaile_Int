@@ -1,0 +1,18 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "izena": "admin",
+      "erabiltzailea": "admin",
+      "pasahitza": "admin",
+      "isAdmin": true
+    },
+    {
+      "id": 2,
+      "izena": "ivan",
+      "erabiltzailea": "ivan",
+      "pasahitza": "ivan",
+      "isAdmin": false
+    }
+  ]
+}
