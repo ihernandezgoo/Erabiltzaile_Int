@@ -1,0 +1,4 @@
+[
+  { "Id":1, "Nombre":"Admin", "Rol":"Administrador" },
+  { "Id":2, "Nombre":"Empleado", "Rol":"Cajero" }
+]
