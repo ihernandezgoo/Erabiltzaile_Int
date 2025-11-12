@@ -1,10 +1,30 @@
 {
   "Comida": [
-    { "Id":1, "Nombre":"Sandwich", "Precio":3.5, "Stock":16 }
+    {
+      "Id": 1,
+      "Nombre": "Sandwich",
+      "Precio": 3.5,
+      "Stock": 16
+    }
   ],
   "Bebida": [
-    { "Id":101, "Nombre":"Kafea", "Precio":1.5, "Stock":40 },
-    { "Id":102, "Nombre":"Sagardoa", "Precio":7, "Stock":35 }
-    ,{ "Id":103, "Nombre":"Ur Mineral", "Precio":1.0, "Stock":50 }
+    {
+      "Id": 101,
+      "Nombre": "Kafea",
+      "Precio": 1.5,
+      "Stock": 40
+    },
+    {
+      "Id": 102,
+      "Nombre": "Sagardoa",
+      "Precio": 7,
+      "Stock": 35
+    },
+    {
+      "Id": 103,
+      "Nombre": "Ur Mineral",
+      "Precio": 1,
+      "Stock": 49
+    }
   ]
 }
