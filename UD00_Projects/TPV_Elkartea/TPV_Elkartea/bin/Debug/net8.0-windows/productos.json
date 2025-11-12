@@ -1,30 +1,27 @@
 {
-  "Comida": [
-    {
-      "Id": 1,
-      "Nombre": "Sandwich",
-      "Precio": 3.5,
-      "Stock": 16
-    }
-  ],
-  "Bebida": [
+  "Edariak": [
     {
       "Id": 101,
-      "Nombre": "Kafea",
-      "Precio": 1.5,
-      "Stock": 40
+      "Nombre": "Sagardoa",
+      "Precio": 7,
+      "Stock": 34,
+      "img": "https://lizeaga.eus/wp-content/uploads/2020/04/caja-6-botellas-lizeaga-euskal-sagardoa-1.jpg"
     },
     {
       "Id": 102,
-      "Nombre": "Sagardoa",
-      "Precio": 7,
-      "Stock": 35
+      "Nombre": "Coca-Cola",
+      "Precio": 2,
+      "Stock": 18,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3aXVAMWlF2ZkCzpHj69MloTZ3BI73I5aSiw\u0026s"
     },
     {
       "Id": 103,
-      "Nombre": "Ur Mineral",
-      "Precio": 1,
-      "Stock": 49
+      "Nombre": "Fanta",
+      "Precio": 2,
+      "Stock": 0,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMO9TP1xqup9yCcxJo-43Sorx2Ewob8HOFuQ\u0026s"
     }
-  ]
+  ],
+  "Comida": [],
+  "Bebida": []
 }

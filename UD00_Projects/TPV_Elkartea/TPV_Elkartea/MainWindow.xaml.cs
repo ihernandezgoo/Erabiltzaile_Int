@@ -18,6 +18,10 @@ namespace TPV_WPF
         public double Precio { get => precio; set { precio = value; OnPropertyChanged(nameof(Precio)); } }
         private int stock;
         public int Stock { get => stock; set { stock = value; OnPropertyChanged(nameof(Stock)); } }
+
+        private string imagen;
+        public string img { get => imagen; set { imagen = value; OnPropertyChanged(nameof(img)); } }
+
         public event PropertyChangedEventHandler PropertyChanged;
         private void OnPropertyChanged(string propName) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
     }
@@ -34,6 +38,7 @@ namespace TPV_WPF
 
     public class ProductosCategoria
     {
+        public List<Producto> Edariak { get; set; } = new List<Producto>();
         public List<Producto> Comida { get; set; } = new List<Producto>();
         public List<Producto> Bebida { get; set; } = new List<Producto>();
     }
@@ -73,6 +78,13 @@ namespace TPV_WPF
             string json = File.ReadAllText("productos.json");
             categorias = JsonSerializer.Deserialize<ProductosCategoria>(json, new JsonSerializerOptions { PropertyNameCaseInsensitive = true })
                         ?? new ProductosCategoria();
+
+            // Asignar imagen por defecto si no existe
+            foreach (var p in categorias.Edariak)
+            {
+                if (string.IsNullOrWhiteSpace(p.img))
+                    p.img = "https://via.placeholder.com/100x100.png?text=No+Image";
+            }
         }
 
         private void CargarUsuarios()
@@ -88,18 +100,17 @@ namespace TPV_WPF
 
         private void ActualizarProductos()
         {
-            if (cbCategoria.SelectedIndex == 0) icProductos.ItemsSource = categorias.Comida;
-            else icProductos.ItemsSource = categorias.Bebida;
+            // Para simplificar, siempre mostramos Edariak
+            icProductos.ItemsSource = categorias.Edariak;
         }
 
         private void CbCategoria_SelectionChanged(object sender, SelectionChangedEventArgs e) => ActualizarProductos();
 
-        // Doble clic agrega automáticamente 1 unidad del producto al carrito
         private void icProductos_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             if (icProductos.SelectedItem is Producto seleccionado)
             {
-                int cantidad = 1; // siempre agrega 1 al carrito
+                int cantidad = 1;
                 var existente = carrito.FirstOrDefault(x => x.Producto == seleccionado);
                 if (existente != null) existente.Cantidad += cantidad;
                 else carrito.Add(new CarritoItem { Producto = seleccionado, Cantidad = cantidad });
@@ -185,7 +196,6 @@ namespace TPV_WPF
 
         private void GuardarProductos() => File.WriteAllText("productos.json", JsonSerializer.Serialize(categorias, new JsonSerializerOptions { WriteIndented = true }));
 
-        // Métodos para guardar JSON de productos y usuarios desde los TextBox del editor
         private void BtnGuardarProductos_Click(object sender, RoutedEventArgs e)
         {
             try

@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\Erabiltzaile_Interfazeak\\UD00_Projects\\TPV_Elkartea\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2AECE9CB-ADDC-4340-B1C7-D397A603C9F3}|TPV_Elkartea\\TPV_Elkartea.csproj|d:\\erabiltzaile_interfazeak\\ud00_projects\\tpv_elkartea\\tpv_elkartea\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AECE9CB-ADDC-4340-B1C7-D397A603C9F3}|TPV_Elkartea\\TPV_Elkartea.csproj|solutionrelative:tpv_elkartea\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2AECE9CB-ADDC-4340-B1C7-D397A603C9F3}|TPV_Elkartea\\TPV_Elkartea.csproj|d:\\erabiltzaile_interfazeak\\ud00_projects\\tpv_elkartea\\tpv_elkartea\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{2AECE9CB-ADDC-4340-B1C7-D397A603C9F3}|TPV_Elkartea\\TPV_Elkartea.csproj|solutionrelative:tpv_elkartea\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AECE9CB-ADDC-4340-B1C7-D397A603C9F3}|TPV_Elkartea\\TPV_Elkartea.csproj|d:\\erabiltzaile_interfazeak\\ud00_projects\\tpv_elkartea\\tpv_elkartea\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AECE9CB-ADDC-4340-B1C7-D397A603C9F3}|TPV_Elkartea\\TPV_Elkartea.csproj|solutionrelative:tpv_elkartea\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,11 +18,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\Erabiltzaile_Interfazeak\\UD00_Projects\\TPV_Elkartea\\TPV_Elkartea\\MainWindow.xaml",
               "RelativeDocumentMoniker": "TPV_Elkartea\\MainWindow.xaml",
@@ -34,13 +34,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "D:\\Erabiltzaile_Interfazeak\\UD00_Projects\\TPV_Elkartea\\TPV_Elkartea\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "TPV_Elkartea\\MainWindow.xaml.cs",
               "ToolTip": "D:\\Erabiltzaile_Interfazeak\\UD00_Projects\\TPV_Elkartea\\TPV_Elkartea\\MainWindow.xaml.cs",
               "RelativeToolTip": "TPV_Elkartea\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAKsAAAAAAAAAAAAuwN8AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAHgAAAAAAAAAAIA0wJIAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-10T10:24:56.51Z",
               "EditorCaption": ""
