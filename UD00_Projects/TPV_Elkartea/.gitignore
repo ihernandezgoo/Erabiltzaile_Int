@@ -1,2 +1,3 @@
-# Visual Studio temporary files
-.vs/
+.vs
+bin
+obj

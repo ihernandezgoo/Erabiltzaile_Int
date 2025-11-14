@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TPV_Elkartea")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+147cfc101063d1a8508330df724d7baf70c2f307")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+62b6c19b36c39b74c56998abf4f4b1d34664798a")]
 [assembly: System.Reflection.AssemblyProductAttribute("TPV_Elkartea")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TPV_Elkartea")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -16,20 +16,7 @@
                     <!-- Panel Productos -->
                     <Border Grid.Column="0" Background="White" CornerRadius="12" Padding="15" Margin="5">
                         <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="*"/>
-                            </Grid.RowDefinitions>
-
-                            <!-- Categoría -->
-                            <StackPanel Grid.Row="0" Orientation="Vertical" Margin="0,0,0,10">
-                                <TextBlock Text="Categoría" FontWeight="SemiBold" FontSize="15" Foreground="#333"/>
-                                <ComboBox x:Name="cbCategoria" SelectionChanged="CbCategoria_SelectionChanged" 
-                                          Background="#f0f0f5" BorderBrush="#ccc" FontSize="14" Padding="5"/>
-                            </StackPanel>
-
-                            <!-- Productos -->
-                            <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+                            <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
                                 <ListBox x:Name="icProductos" SelectionMode="Single" BorderThickness="0" Background="Transparent"
                                          MouseDoubleClick="icProductos_MouseDoubleClick">
                                     <ListBox.ItemsPanel>
@@ -45,20 +32,17 @@
                                                     <DropShadowEffect Color="Black" BlurRadius="10" ShadowDepth="3" Opacity="0.3"/>
                                                 </Border.Effect>
                                                 <StackPanel>
-                                                    <!-- Imagen del producto -->
                                                     <Image Height="150" Stretch="UniformToFill" Margin="0,0,0,5">
                                                         <Image.Source>
                                                             <BitmapImage UriSource="{Binding img}" />
                                                         </Image.Source>
                                                     </Image>
-
                                                     <TextBlock Text="{Binding Nombre}" FontWeight="Bold" FontSize="16"
                                                                HorizontalAlignment="Center" Margin="5" TextWrapping="Wrap"/>
                                                     <TextBlock Text="{Binding Precio, StringFormat={}{0:F2} €}" 
-                                                           Foreground="#27AE60"
-                                                           FontWeight="SemiBold" 
-                                                           HorizontalAlignment="Center"/>
-
+                                                               Foreground="#27AE60"
+                                                               FontWeight="SemiBold" 
+                                                               HorizontalAlignment="Center"/>
                                                 </StackPanel>
                                             </Border>
                                         </DataTemplate>

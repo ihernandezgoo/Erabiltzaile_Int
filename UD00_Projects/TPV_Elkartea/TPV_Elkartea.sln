@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36414.22 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPV_Elkartea", "TPV_Elkartea\TPV_Elkartea.csproj", "{2AECE9CB-ADDC-4340-B1C7-D397A603C9F3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPV_Elkartea", "TPV_Elkartea\TPV_Elkartea.csproj", "{9FEC81F4-9B61-4E7F-9C2F-20BECCB0F91F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2AECE9CB-ADDC-4340-B1C7-D397A603C9F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2AECE9CB-ADDC-4340-B1C7-D397A603C9F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2AECE9CB-ADDC-4340-B1C7-D397A603C9F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2AECE9CB-ADDC-4340-B1C7-D397A603C9F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FEC81F4-9B61-4E7F-9C2F-20BECCB0F91F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FEC81F4-9B61-4E7F-9C2F-20BECCB0F91F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FEC81F4-9B61-4E7F-9C2F-20BECCB0F91F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FEC81F4-9B61-4E7F-9C2F-20BECCB0F91F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {B5F9F505-2C46-461B-9020-12B08976EFEB}
+		SolutionGuid = {3D25F193-B28E-4EEE-8E1E-E77FE8A6D23A}
 	EndGlobalSection
 EndGlobal

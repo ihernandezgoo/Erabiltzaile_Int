@@ -39,8 +39,6 @@ namespace TPV_WPF
     public class ProductosCategoria
     {
         public List<Producto> Edariak { get; set; } = new List<Producto>();
-        public List<Producto> Comida { get; set; } = new List<Producto>();
-        public List<Producto> Bebida { get; set; } = new List<Producto>();
     }
 
     public class Usuario
@@ -62,24 +60,21 @@ namespace TPV_WPF
             CargarProductos();
             CargarUsuarios();
             dgCarrito.ItemsSource = carrito;
-
-            cbCategoria.ItemsSource = new List<string> { "Comida", "Bebida" };
-            cbCategoria.SelectedIndex = 0;
             ActualizarProductos();
         }
 
         private void CargarProductos()
         {
-            if (!File.Exists("productos.json"))
+            if (!File.Exists("produktuak.json"))
             {
                 categorias = new ProductosCategoria();
                 return;
             }
-            string json = File.ReadAllText("productos.json");
+
+            string json = File.ReadAllText("produktuak.json");
             categorias = JsonSerializer.Deserialize<ProductosCategoria>(json, new JsonSerializerOptions { PropertyNameCaseInsensitive = true })
                         ?? new ProductosCategoria();
 
-            // Asignar imagen por defecto si no existe
             foreach (var p in categorias.Edariak)
             {
                 if (string.IsNullOrWhiteSpace(p.img))
@@ -89,22 +84,17 @@ namespace TPV_WPF
 
         private void CargarUsuarios()
         {
-            if (!File.Exists("usuarios.json"))
+            if (!File.Exists("erabiltzaileak.json"))
             {
                 usuarios = new List<Usuario>();
                 return;
             }
-            string json = File.ReadAllText("usuarios.json");
+
+            string json = File.ReadAllText("erabiltzaileak.json");
             usuarios = JsonSerializer.Deserialize<List<Usuario>>(json, new JsonSerializerOptions { PropertyNameCaseInsensitive = true }) ?? new List<Usuario>();
         }
 
-        private void ActualizarProductos()
-        {
-            // Para simplificar, siempre mostramos Edariak
-            icProductos.ItemsSource = categorias.Edariak;
-        }
-
-        private void CbCategoria_SelectionChanged(object sender, SelectionChangedEventArgs e) => ActualizarProductos();
+        private void ActualizarProductos() => icProductos.ItemsSource = categorias.Edariak;
 
         private void icProductos_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
@@ -194,7 +184,7 @@ namespace TPV_WPF
 
         private void BtnVolverTPV_Click(object sender, RoutedEventArgs e) => tabControl.SelectedItem = tabTPV;
 
-        private void GuardarProductos() => File.WriteAllText("productos.json", JsonSerializer.Serialize(categorias, new JsonSerializerOptions { WriteIndented = true }));
+        private void GuardarProductos() => File.WriteAllText("produktuak.json", JsonSerializer.Serialize(categorias, new JsonSerializerOptions { WriteIndented = true }));
 
         private void BtnGuardarProductos_Click(object sender, RoutedEventArgs e)
         {
@@ -221,7 +211,7 @@ namespace TPV_WPF
                 if (!string.IsNullOrWhiteSpace(tbJsonUsuarios.Text))
                 {
                     var usuarios = JsonSerializer.Deserialize<List<Usuario>>(tbJsonUsuarios.Text) ?? new List<Usuario>();
-                    File.WriteAllText("usuarios.json", JsonSerializer.Serialize(usuarios, new JsonSerializerOptions { WriteIndented = true }));
+                    File.WriteAllText("erabiltzaileak.json", JsonSerializer.Serialize(usuarios, new JsonSerializerOptions { WriteIndented = true }));
                     MessageBox.Show("Usuarios guardados correctamente.");
                 }
             }
