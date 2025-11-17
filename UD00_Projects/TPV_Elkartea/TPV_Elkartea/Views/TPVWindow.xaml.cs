@@ -7,8 +7,9 @@ using System.Text.Json;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using Microsoft.Data.Sqlite;
 
-namespace TPV_WPF
+namespace TPV_Elkartea.Views
 {
     public class Producto : INotifyPropertyChanged
     {
@@ -18,10 +19,8 @@ namespace TPV_WPF
         public double Precio { get => precio; set { precio = value; OnPropertyChanged(nameof(Precio)); } }
         private int stock;
         public int Stock { get => stock; set { stock = value; OnPropertyChanged(nameof(Stock)); } }
-
         private string imagen;
         public string img { get => imagen; set { imagen = value; OnPropertyChanged(nameof(img)); } }
-
         public event PropertyChangedEventHandler PropertyChanged;
         private void OnPropertyChanged(string propName) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
     }
@@ -48,13 +47,14 @@ namespace TPV_WPF
         public string Rol { get; set; }
     }
 
-    public partial class MainWindow : Window
+    public partial class TPVWindow : Window
     {
         private ProductosCategoria categorias;
         private BindingList<CarritoItem> carrito = new BindingList<CarritoItem>();
         private List<Usuario> usuarios = new List<Usuario>();
+        private string dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "produktuak.db");
 
-        public MainWindow()
+        public TPVWindow()
         {
             InitializeComponent();
             CargarProductos();
@@ -65,32 +65,36 @@ namespace TPV_WPF
 
         private void CargarProductos()
         {
-            if (!File.Exists("produktuak.json"))
+            categorias = new ProductosCategoria();
+            if (!File.Exists(dbPath))
             {
-                categorias = new ProductosCategoria();
+                MessageBox.Show("No se encontró la base de datos SQLite.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
-
-            string json = File.ReadAllText("produktuak.json");
-            categorias = JsonSerializer.Deserialize<ProductosCategoria>(json, new JsonSerializerOptions { PropertyNameCaseInsensitive = true })
-                        ?? new ProductosCategoria();
-
-            foreach (var p in categorias.Edariak)
+            using var conexion = new SqliteConnection($"Data Source={dbPath}");
+            conexion.Open();
+            string query = "SELECT Id, Nombre, Precio, Stock, img FROM Edariak";
+            using var cmd = new SqliteCommand(query, conexion);
+            using var reader = cmd.ExecuteReader();
+            while (reader.Read())
             {
-                if (string.IsNullOrWhiteSpace(p.img))
-                    p.img = "https://via.placeholder.com/100x100.png?text=No+Image";
+                var p = new Producto
+                {
+                    Id = reader.GetInt32(0),
+                    Nombre = reader.GetString(1),
+                    Precio = reader.GetDouble(2),
+                    Stock = reader.GetInt32(3),
+                    img = reader.IsDBNull(4) ? "https://via.placeholder.com/100x100.png?text=No+Image" : reader.GetString(4)
+                };
+                categorias.Edariak.Add(p);
             }
         }
 
         private void CargarUsuarios()
         {
-            if (!File.Exists("erabiltzaileak.json"))
-            {
-                usuarios = new List<Usuario>();
-                return;
-            }
-
-            string json = File.ReadAllText("erabiltzaileak.json");
+            string usuariosFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "erabiltzaileak.json");
+            if (!File.Exists(usuariosFile)) { usuarios = new List<Usuario>(); return; }
+            string json = File.ReadAllText(usuariosFile);
             usuarios = JsonSerializer.Deserialize<List<Usuario>>(json, new JsonSerializerOptions { PropertyNameCaseInsensitive = true }) ?? new List<Usuario>();
         }
 
@@ -114,7 +118,7 @@ namespace TPV_WPF
             double subtotal = carrito.Sum(i => i.Total);
             double iva = subtotal * 0.21;
             double total = subtotal + iva;
-            tbTotal.Text = $"Subtotal: ${subtotal:F2} | IVA 21%: ${iva:F2} | TOTAL: ${total:F2}";
+            tbTotal.Text = $"Subtotal: {subtotal:F2} € | IVA 21%: {iva:F2} € | TOTAL: {total:F2} €";
         }
 
         private void BtnEditarCantidadFila_Click(object sender, RoutedEventArgs e)
@@ -154,16 +158,14 @@ namespace TPV_WPF
             double subtotal = carrito.Sum(i => i.Total);
             double iva = subtotal * 0.21;
             double total = subtotal + iva;
-
             string ticket = "===== TICKET =====\n";
             ticket += $"{"Cant.",-5} {"Producto",-20} {"Total",10}\n";
             ticket += new string('-', 37) + "\n";
-            foreach (var item in carrito) ticket += $"{item.Cantidad,-5} {item.Producto.Nombre,-20} ${item.Total,10:F2}\n";
+            foreach (var item in carrito) ticket += $"{item.Cantidad,-5} {item.Producto.Nombre,-20} {item.Total,10:F2} €\n";
             ticket += new string('-', 37) + "\n";
-            ticket += $"{"Subtotal:",-25} ${subtotal,10:F2}\n";
-            ticket += $"{"IVA 21%:",-25} ${iva,10:F2}\n";
-            ticket += $"{"TOTAL:",-25} ${total,10:F2}\n";
-
+            ticket += $"{"Subtotal:",-25} {subtotal,10:F2} €\n";
+            ticket += $"{"IVA 21%:",-25} {iva,10:F2} €\n";
+            ticket += $"{"TOTAL:",-25} {total,10:F2} €\n";
             tbTicket.Text = ticket;
         }
 
@@ -184,40 +186,17 @@ namespace TPV_WPF
 
         private void BtnVolverTPV_Click(object sender, RoutedEventArgs e) => tabControl.SelectedItem = tabTPV;
 
-        private void GuardarProductos() => File.WriteAllText("produktuak.json", JsonSerializer.Serialize(categorias, new JsonSerializerOptions { WriteIndented = true }));
-
-        private void BtnGuardarProductos_Click(object sender, RoutedEventArgs e)
+        private void GuardarProductos()
         {
-            try
+            if (!File.Exists(dbPath)) { MessageBox.Show("No se encontró la base de datos SQLite.", "Error", MessageBoxButton.OK, MessageBoxImage.Error); return; }
+            using var conexion = new SqliteConnection($"Data Source={dbPath}");
+            conexion.Open();
+            foreach (var p in categorias.Edariak)
             {
-                if (!string.IsNullOrWhiteSpace(tbJsonProductos.Text))
-                {
-                    categorias = JsonSerializer.Deserialize<ProductosCategoria>(tbJsonProductos.Text) ?? new ProductosCategoria();
-                    GuardarProductos();
-                    MessageBox.Show("Productos guardados correctamente.");
-                    ActualizarProductos();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error al guardar productos: {ex.Message}");
-            }
-        }
-
-        private void BtnGuardarUsuarios_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                if (!string.IsNullOrWhiteSpace(tbJsonUsuarios.Text))
-                {
-                    var usuarios = JsonSerializer.Deserialize<List<Usuario>>(tbJsonUsuarios.Text) ?? new List<Usuario>();
-                    File.WriteAllText("erabiltzaileak.json", JsonSerializer.Serialize(usuarios, new JsonSerializerOptions { WriteIndented = true }));
-                    MessageBox.Show("Usuarios guardados correctamente.");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error al guardar usuarios: {ex.Message}");
+                using var cmd = new SqliteCommand("UPDATE Edariak SET Stock=@stock WHERE Id=@id", conexion);
+                cmd.Parameters.AddWithValue("@stock", p.Stock);
+                cmd.Parameters.AddWithValue("@id", p.Id);
+                cmd.ExecuteNonQuery();
             }
         }
     }
