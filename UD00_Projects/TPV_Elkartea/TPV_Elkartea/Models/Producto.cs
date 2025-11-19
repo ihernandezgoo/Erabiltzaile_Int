@@ -22,10 +22,10 @@ namespace TPV_Elkartea.Models
         }
 
         private string imagen;
-        public string Img
+        public string img
         {
             get => imagen;
-            set { imagen = value; OnPropertyChanged(nameof(Img)); }
+            set { imagen = value; OnPropertyChanged(nameof(img)); }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

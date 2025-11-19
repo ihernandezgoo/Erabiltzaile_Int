@@ -1,64 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
-using System.IO;
 using System.Linq;
-using System.Text.Json;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-using Microsoft.Data.Sqlite;
+using TPV_Elkartea.Models;
+using TPV_Elkartea.Services;
 
 namespace TPV_Elkartea.Views
 {
-    public class Producto : INotifyPropertyChanged
-    {
-        public int Id { get; set; }
-        public string Nombre { get; set; }
-        private double precio;
-        public double Precio { get => precio; set { precio = value; OnPropertyChanged(nameof(Precio)); } }
-        private int stock;
-        public int Stock { get => stock; set { stock = value; OnPropertyChanged(nameof(Stock)); } }
-        private string imagen;
-        public string img { get => imagen; set { imagen = value; OnPropertyChanged(nameof(img)); } }
-        public event PropertyChangedEventHandler PropertyChanged;
-        private void OnPropertyChanged(string propName) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
-    }
-
-    public class CarritoItem : INotifyPropertyChanged
-    {
-        public Producto Producto { get; set; }
-        private int cantidad;
-        public int Cantidad { get => cantidad; set { cantidad = value; OnPropertyChanged(nameof(Cantidad)); OnPropertyChanged(nameof(Total)); } }
-        public double Total => Producto.Precio * Cantidad;
-        public event PropertyChangedEventHandler PropertyChanged;
-        private void OnPropertyChanged(string propName) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
-    }
-
-    public class ProductosCategoria
-    {
-        public List<Producto> Edariak { get; set; } = new List<Producto>();
-    }
-
-    public class Usuario
-    {
-        public int Id { get; set; }
-        public string Nombre { get; set; }
-        public string Rol { get; set; }
-    }
-
     public partial class TPVWindow : Window
     {
         private ProductosCategoria categorias;
         private BindingList<CarritoItem> carrito = new BindingList<CarritoItem>();
         private List<Usuario> usuarios = new List<Usuario>();
-        private string dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "produktuak.db");
+
+        private readonly ProductoService productoService;
+        private readonly UsuarioService usuarioService;
 
         public TPVWindow()
         {
             InitializeComponent();
+
+            string baseDir = System.AppDomain.CurrentDomain.BaseDirectory;
+            productoService = new ProductoService(System.IO.Path.Combine(baseDir, "produktuak.db"));
+            usuarioService = new UsuarioService(baseDir);
+
             CargarProductos();
             CargarUsuarios();
+
             dgCarrito.ItemsSource = carrito;
             ActualizarProductos();
         }
@@ -66,37 +36,10 @@ namespace TPV_Elkartea.Views
         private void CargarProductos()
         {
             categorias = new ProductosCategoria();
-            if (!File.Exists(dbPath))
-            {
-                MessageBox.Show("No se encontró la base de datos SQLite.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
-            }
-            using var conexion = new SqliteConnection($"Data Source={dbPath}");
-            conexion.Open();
-            string query = "SELECT Id, Nombre, Precio, Stock, img FROM Edariak";
-            using var cmd = new SqliteCommand(query, conexion);
-            using var reader = cmd.ExecuteReader();
-            while (reader.Read())
-            {
-                var p = new Producto
-                {
-                    Id = reader.GetInt32(0),
-                    Nombre = reader.GetString(1),
-                    Precio = reader.GetDouble(2),
-                    Stock = reader.GetInt32(3),
-                    img = reader.IsDBNull(4) ? "https://via.placeholder.com/100x100.png?text=No+Image" : reader.GetString(4)
-                };
-                categorias.Edariak.Add(p);
-            }
+            categorias.Edariak.AddRange(productoService.CargarProductos());
         }
 
-        private void CargarUsuarios()
-        {
-            string usuariosFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "erabiltzaileak.json");
-            if (!File.Exists(usuariosFile)) { usuarios = new List<Usuario>(); return; }
-            string json = File.ReadAllText(usuariosFile);
-            usuarios = JsonSerializer.Deserialize<List<Usuario>>(json, new JsonSerializerOptions { PropertyNameCaseInsensitive = true }) ?? new List<Usuario>();
-        }
+        private void CargarUsuarios() => usuarios = usuarioService.CargarUsuarios();
 
         private void ActualizarProductos() => icProductos.ItemsSource = categorias.Edariak;
 
@@ -106,8 +49,11 @@ namespace TPV_Elkartea.Views
             {
                 int cantidad = 1;
                 var existente = carrito.FirstOrDefault(x => x.Producto == seleccionado);
-                if (existente != null) existente.Cantidad += cantidad;
-                else carrito.Add(new CarritoItem { Producto = seleccionado, Cantidad = cantidad });
+                if (existente != null)
+                    existente.Cantidad += cantidad;
+                else
+                    carrito.Add(new CarritoItem { Producto = seleccionado, Cantidad = cantidad });
+
                 ActualizarCarrito();
             }
         }
@@ -125,7 +71,11 @@ namespace TPV_Elkartea.Views
         {
             if (sender is Button btn && btn.DataContext is CarritoItem seleccionado)
             {
-                string input = Microsoft.VisualBasic.Interaction.InputBox($"Ingrese nueva cantidad para {seleccionado.Producto.Nombre}", "Editar Cantidad", seleccionado.Cantidad.ToString());
+                string input = Microsoft.VisualBasic.Interaction.InputBox(
+                    $"Ingrese nueva cantidad para {seleccionado.Producto.Nombre}",
+                    "Editar Cantidad",
+                    seleccionado.Cantidad.ToString()
+                );
                 if (int.TryParse(input, out int nuevaCantidad) && nuevaCantidad > 0)
                 {
                     seleccionado.Cantidad = nuevaCantidad;
@@ -138,7 +88,10 @@ namespace TPV_Elkartea.Views
         {
             if (sender is Button btn && btn.DataContext is CarritoItem seleccionado)
             {
-                if (MessageBox.Show($"¿Desea eliminar {seleccionado.Producto.Nombre} del carrito?", "Eliminar Producto", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                if (MessageBox.Show(
+                        $"¿Desea eliminar {seleccionado.Producto.Nombre} del carrito?",
+                        "Eliminar Producto",
+                        MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                 {
                     carrito.Remove(seleccionado);
                     ActualizarCarrito();
@@ -158,14 +111,17 @@ namespace TPV_Elkartea.Views
             double subtotal = carrito.Sum(i => i.Total);
             double iva = subtotal * 0.21;
             double total = subtotal + iva;
+
             string ticket = "===== TICKET =====\n";
             ticket += $"{"Cant.",-5} {"Producto",-20} {"Total",10}\n";
             ticket += new string('-', 37) + "\n";
-            foreach (var item in carrito) ticket += $"{item.Cantidad,-5} {item.Producto.Nombre,-20} {item.Total,10:F2} €\n";
+            foreach (var item in carrito)
+                ticket += $"{item.Cantidad,-5} {item.Producto.Nombre,-20} {item.Total,10:F2} €\n";
             ticket += new string('-', 37) + "\n";
             ticket += $"{"Subtotal:",-25} {subtotal,10:F2} €\n";
             ticket += $"{"IVA 21%:",-25} {iva,10:F2} €\n";
             ticket += $"{"TOTAL:",-25} {total,10:F2} €\n";
+
             tbTicket.Text = ticket;
         }
 
@@ -176,7 +132,9 @@ namespace TPV_Elkartea.Views
                 item.Producto.Stock -= item.Cantidad;
                 if (item.Producto.Stock < 0) item.Producto.Stock = 0;
             }
-            GuardarProductos();
+
+            productoService.GuardarProductos(categorias.Edariak);
+
             MessageBox.Show("Pedido confirmado.", "Confirmación", MessageBoxButton.OK, MessageBoxImage.Information);
             carrito.Clear();
             ActualizarProductos();
@@ -185,19 +143,5 @@ namespace TPV_Elkartea.Views
         }
 
         private void BtnVolverTPV_Click(object sender, RoutedEventArgs e) => tabControl.SelectedItem = tabTPV;
-
-        private void GuardarProductos()
-        {
-            if (!File.Exists(dbPath)) { MessageBox.Show("No se encontró la base de datos SQLite.", "Error", MessageBoxButton.OK, MessageBoxImage.Error); return; }
-            using var conexion = new SqliteConnection($"Data Source={dbPath}");
-            conexion.Open();
-            foreach (var p in categorias.Edariak)
-            {
-                using var cmd = new SqliteCommand("UPDATE Edariak SET Stock=@stock WHERE Id=@id", conexion);
-                cmd.Parameters.AddWithValue("@stock", p.Stock);
-                cmd.Parameters.AddWithValue("@id", p.Id);
-                cmd.ExecuteNonQuery();
-            }
-        }
     }
 }

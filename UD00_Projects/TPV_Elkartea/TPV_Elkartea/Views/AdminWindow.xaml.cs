@@ -33,7 +33,7 @@ namespace TPV_Elkartea.Views
 
             using var conexion = new SqliteConnection($"Data Source={dbProductos}");
             conexion.Open();
-            string query = "SELECT Id, Nombre, Precio, Stock, Img FROM Edariak";
+            string query = "SELECT Id, Nombre, Precio, Stock, img FROM Edariak";
             using var cmd = new SqliteCommand(query, conexion);
             using var reader = cmd.ExecuteReader();
             while (reader.Read())
@@ -54,7 +54,7 @@ namespace TPV_Elkartea.Views
             var nuevo = new Producto { Nombre = "Producto nuevo", Precio = 0, Stock = 0, img = "" };
             using var conexion = new SqliteConnection($"Data Source={dbProductos}");
             conexion.Open();
-            string query = "INSERT INTO Edariak (Nombre, Precio, Stock, Img) VALUES (@nombre, @precio, @stock, @img); SELECT last_insert_rowid();";
+            string query = "INSERT INTO Edariak (Nombre, Precio, Stock, img) VALUES (@nombre, @precio, @stock, @img); SELECT last_insert_rowid();";
             using var cmd = new SqliteCommand(query, conexion);
             cmd.Parameters.AddWithValue("@nombre", nuevo.Nombre);
             cmd.Parameters.AddWithValue("@precio", nuevo.Precio);
