@@ -64,7 +64,7 @@ namespace TPV_Elkartea.Views
             double subtotal = carrito.Sum(i => i.Total);
             double iva = subtotal * 0.21;
             double total = subtotal + iva;
-            tbTotal.Text = $"Subtotal: {subtotal:F2} € | IVA 21%: {iva:F2} € | TOTAL: {total:F2} €";
+            tbTotal.Text = $"Subtotala: {subtotal:F2} € | BEZ 21%: {iva:F2} € | TOTALA: {total:F2} €";
         }
 
         private void BtnEditarCantidadFila_Click(object sender, RoutedEventArgs e)
@@ -72,8 +72,8 @@ namespace TPV_Elkartea.Views
             if (sender is Button btn && btn.DataContext is CarritoItem seleccionado)
             {
                 string input = Microsoft.VisualBasic.Interaction.InputBox(
-                    $"Ingrese nueva cantidad para {seleccionado.Producto.Nombre}",
-                    "Editar Cantidad",
+                    $"Sartu kantitate berria {seleccionado.Producto.Nombre}",
+                    "Kantitate berria sartu",
                     seleccionado.Cantidad.ToString()
                 );
                 if (int.TryParse(input, out int nuevaCantidad) && nuevaCantidad > 0)
@@ -89,8 +89,8 @@ namespace TPV_Elkartea.Views
             if (sender is Button btn && btn.DataContext is CarritoItem seleccionado)
             {
                 if (MessageBox.Show(
-                        $"¿Desea eliminar {seleccionado.Producto.Nombre} del carrito?",
-                        "Eliminar Producto",
+                        $"Korritotik {seleccionado.Producto.Nombre} produktua ezabatu dezakezu?",
+                        "Produktua ezabatu",
                         MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                 {
                     carrito.Remove(seleccionado);
@@ -101,7 +101,7 @@ namespace TPV_Elkartea.Views
 
         private void BtnIrTicket_Click(object sender, RoutedEventArgs e)
         {
-            if (!carrito.Any()) { MessageBox.Show("Carrito vacío."); return; }
+            if (!carrito.Any()) { MessageBox.Show("Karritoa hutsik dago"); return; }
             GenerarTicket();
             tabControl.SelectedItem = tabTicket;
         }
@@ -112,15 +112,15 @@ namespace TPV_Elkartea.Views
             double iva = subtotal * 0.21;
             double total = subtotal + iva;
 
-            string ticket = "===== TICKET =====\n";
-            ticket += $"{"Cant.",-5} {"Producto",-20} {"Total",10}\n";
+            string ticket = "===== TICKETA =====\n";
+            ticket += $"{"Kantitatea.",-5} {"Produktua",-20} {"Totala",10}\n";
             ticket += new string('-', 37) + "\n";
             foreach (var item in carrito)
                 ticket += $"{item.Cantidad,-5} {item.Producto.Nombre,-20} {item.Total,10:F2} €\n";
             ticket += new string('-', 37) + "\n";
-            ticket += $"{"Subtotal:",-25} {subtotal,10:F2} €\n";
-            ticket += $"{"IVA 21%:",-25} {iva,10:F2} €\n";
-            ticket += $"{"TOTAL:",-25} {total,10:F2} €\n";
+            ticket += $"{"Subtotala:",-25} {subtotal,10:F2} €\n";
+            ticket += $"{"BEZ 21%:",-25} {iva,10:F2} €\n";
+            ticket += $"{"TOTALA:",-25} {total,10:F2} €\n";
 
             tbTicket.Text = ticket;
         }
@@ -135,7 +135,7 @@ namespace TPV_Elkartea.Views
 
             productoService.GuardarProductos(categorias.Edariak);
 
-            MessageBox.Show("Pedido confirmado.", "Confirmación", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("Zure ordera konfirmatu.", "Azkeneko pausuoa", MessageBoxButton.OK, MessageBoxImage.Information);
             carrito.Clear();
             ActualizarProductos();
             ActualizarCarrito();

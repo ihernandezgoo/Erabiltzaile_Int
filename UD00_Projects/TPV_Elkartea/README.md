@@ -18,11 +18,31 @@ Run TPV_Elkartea.exe
 ```
 ---
 
-## Uneko egoera
+2. Datu baseak:
 
-```
-✅ TPV funtzionala: Salmentak eta terminaleko oinarrizko eragiketak egin daitezke.
+```bash
+1. Erabiltzaileak.db
+CREATE TABLE "Erabiltzaileak" (
+	"Id"	INTEGER,
+	"Izena"	TEXT,
+	"Pasahitza"	TEXT,
+	"Rola"	TEXT,
+	PRIMARY KEY("Id")
+)
 
-⚠️ Login eta administrazio panela: Oraindik ez da inplementatu.
+Erabiltzaileen sortutako kontuak
+
+Admin, Admin
+Ivan, Ivan
+
+2. Produktuak.db
+CREATE TABLE "Edariak" (
+	"Id"	INTEGER,
+	"Nombre"	TEXT,
+	"Precio"	INTEGER,
+	"Stock"	INTEGER,
+	"img"	TEXT,
+	PRIMARY KEY("Id")
+)
 
 ```

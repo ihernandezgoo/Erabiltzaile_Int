@@ -194,3 +194,5 @@ D:\Erabiltzaile_Int\UD00_Projects\TPV_Elkartea - copia\TPV_Elkartea\bin\Debug\ne
 D:\Erabiltzaile_Int\UD00_Projects\TPV_Elkartea - copia\TPV_Elkartea\obj\Debug\net8.0-windows\TPV_Elka.267699E2.Up2Date
 D:\Erabiltzaile_Int\UD00_Projects\TPV_Elkartea - copia\TPV_Elkartea\obj\Debug\net8.0-windows\TPV_Elkartea.genruntimeconfig.cache
 D:\Erabiltzaile_Int\UD00_Projects\TPV_Elkartea - copia\TPV_Elkartea\obj\Debug\net8.0-windows\ref\TPV_Elkartea.dll
+D:\Erabiltzaile_Int\UD00_Projects\TPV_Elkartea\TPV_Elkartea\obj\Debug\net8.0-windows\Controls\Mahaia.baml
+D:\Erabiltzaile_Int\UD00_Projects\TPV_Elkartea\TPV_Elkartea\obj\Debug\net8.0-windows\Controls\Mahaia.g.cs
