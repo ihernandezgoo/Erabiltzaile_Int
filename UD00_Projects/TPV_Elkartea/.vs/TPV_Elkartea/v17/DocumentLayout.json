@@ -1,21 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Erabiltzaile_Int\\UD00_Projects\\TPV_Elkartea\\",
+  "WorkspaceRootPath": "C:\\Users\\ik012982i18\\Videos\\Erabiltzaile_Int\\UD00_Projects\\TPV_Elkartea\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9FEC81F4-9B61-4E7F-9C2F-20BECCB0F91F}|TPV_Elkartea\\TPV_Elkartea.csproj|d:\\erabiltzaile_int\\ud00_projects\\tpv_elkartea\\tpv_elkartea\\views\\tpvwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9FEC81F4-9B61-4E7F-9C2F-20BECCB0F91F}|TPV_Elkartea\\TPV_Elkartea.csproj|c:\\users\\ik012982i18\\videos\\erabiltzaile_int\\ud00_projects\\tpv_elkartea\\tpv_elkartea\\views\\tpvwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9FEC81F4-9B61-4E7F-9C2F-20BECCB0F91F}|TPV_Elkartea\\TPV_Elkartea.csproj|solutionrelative:tpv_elkartea\\views\\tpvwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9FEC81F4-9B61-4E7F-9C2F-20BECCB0F91F}|TPV_Elkartea\\TPV_Elkartea.csproj|d:\\erabiltzaile_int\\ud00_projects\\tpv_elkartea\\tpv_elkartea\\views\\tpvwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{9FEC81F4-9B61-4E7F-9C2F-20BECCB0F91F}|TPV_Elkartea\\TPV_Elkartea.csproj|c:\\users\\ik012982i18\\videos\\erabiltzaile_int\\ud00_projects\\tpv_elkartea\\tpv_elkartea\\views\\tpvwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{9FEC81F4-9B61-4E7F-9C2F-20BECCB0F91F}|TPV_Elkartea\\TPV_Elkartea.csproj|solutionrelative:tpv_elkartea\\views\\tpvwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9FEC81F4-9B61-4E7F-9C2F-20BECCB0F91F}|TPV_Elkartea\\TPV_Elkartea.csproj|d:\\erabiltzaile_int\\ud00_projects\\tpv_elkartea\\tpv_elkartea\\controls\\mahaia.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{9FEC81F4-9B61-4E7F-9C2F-20BECCB0F91F}|TPV_Elkartea\\TPV_Elkartea.csproj|c:\\users\\ik012982i18\\videos\\erabiltzaile_int\\ud00_projects\\tpv_elkartea\\tpv_elkartea\\controls\\mahaia.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{9FEC81F4-9B61-4E7F-9C2F-20BECCB0F91F}|TPV_Elkartea\\TPV_Elkartea.csproj|solutionrelative:tpv_elkartea\\controls\\mahaia.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9FEC81F4-9B61-4E7F-9C2F-20BECCB0F91F}|TPV_Elkartea\\TPV_Elkartea.csproj|d:\\erabiltzaile_int\\ud00_projects\\tpv_elkartea\\tpv_elkartea\\views\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{9FEC81F4-9B61-4E7F-9C2F-20BECCB0F91F}|TPV_Elkartea\\TPV_Elkartea.csproj|c:\\users\\ik012982i18\\videos\\erabiltzaile_int\\ud00_projects\\tpv_elkartea\\tpv_elkartea\\views\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{9FEC81F4-9B61-4E7F-9C2F-20BECCB0F91F}|TPV_Elkartea\\TPV_Elkartea.csproj|solutionrelative:tpv_elkartea\\views\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
@@ -32,9 +32,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "TPVWindow.xaml.cs",
-              "DocumentMoniker": "D:\\Erabiltzaile_Int\\UD00_Projects\\TPV_Elkartea\\TPV_Elkartea\\Views\\TPVWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ik012982i18\\Videos\\Erabiltzaile_Int\\UD00_Projects\\TPV_Elkartea\\TPV_Elkartea\\Views\\TPVWindow.xaml.cs",
               "RelativeDocumentMoniker": "TPV_Elkartea\\Views\\TPVWindow.xaml.cs",
-              "ToolTip": "D:\\Erabiltzaile_Int\\UD00_Projects\\TPV_Elkartea\\TPV_Elkartea\\Views\\TPVWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\ik012982i18\\Videos\\Erabiltzaile_Int\\UD00_Projects\\TPV_Elkartea\\TPV_Elkartea\\Views\\TPVWindow.xaml.cs",
               "RelativeToolTip": "TPV_Elkartea\\Views\\TPVWindow.xaml.cs",
               "ViewState": "AgIAAG8AAAAAAAAAAADwv4kAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -45,37 +45,34 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "AdminWindow.xaml",
-              "DocumentMoniker": "D:\\Erabiltzaile_Int\\UD00_Projects\\TPV_Elkartea\\TPV_Elkartea\\Views\\AdminWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\ik012982i18\\Videos\\Erabiltzaile_Int\\UD00_Projects\\TPV_Elkartea\\TPV_Elkartea\\Views\\AdminWindow.xaml",
               "RelativeDocumentMoniker": "TPV_Elkartea\\Views\\AdminWindow.xaml",
-              "ToolTip": "D:\\Erabiltzaile_Int\\UD00_Projects\\TPV_Elkartea\\TPV_Elkartea\\Views\\AdminWindow.xaml",
+              "ToolTip": "C:\\Users\\ik012982i18\\Videos\\Erabiltzaile_Int\\UD00_Projects\\TPV_Elkartea\\TPV_Elkartea\\Views\\AdminWindow.xaml",
               "RelativeToolTip": "TPV_Elkartea\\Views\\AdminWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-20T08:03:25.289Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-20T08:03:25.289Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Mahaia.xaml",
-              "DocumentMoniker": "D:\\Erabiltzaile_Int\\UD00_Projects\\TPV_Elkartea\\TPV_Elkartea\\Controls\\Mahaia.xaml",
+              "DocumentMoniker": "C:\\Users\\ik012982i18\\Videos\\Erabiltzaile_Int\\UD00_Projects\\TPV_Elkartea\\TPV_Elkartea\\Controls\\Mahaia.xaml",
               "RelativeDocumentMoniker": "TPV_Elkartea\\Controls\\Mahaia.xaml",
-              "ToolTip": "D:\\Erabiltzaile_Int\\UD00_Projects\\TPV_Elkartea\\TPV_Elkartea\\Controls\\Mahaia.xaml",
+              "ToolTip": "C:\\Users\\ik012982i18\\Videos\\Erabiltzaile_Int\\UD00_Projects\\TPV_Elkartea\\TPV_Elkartea\\Controls\\Mahaia.xaml",
               "RelativeToolTip": "TPV_Elkartea\\Controls\\Mahaia.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-20T08:01:30.933Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-20T08:01:30.933Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "TPVWindow.xaml",
-              "DocumentMoniker": "D:\\Erabiltzaile_Int\\UD00_Projects\\TPV_Elkartea\\TPV_Elkartea\\Views\\TPVWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\ik012982i18\\Videos\\Erabiltzaile_Int\\UD00_Projects\\TPV_Elkartea\\TPV_Elkartea\\Views\\TPVWindow.xaml",
               "RelativeDocumentMoniker": "TPV_Elkartea\\Views\\TPVWindow.xaml",
-              "ToolTip": "D:\\Erabiltzaile_Int\\UD00_Projects\\TPV_Elkartea\\TPV_Elkartea\\Views\\TPVWindow.xaml",
+              "ToolTip": "C:\\Users\\ik012982i18\\Videos\\Erabiltzaile_Int\\UD00_Projects\\TPV_Elkartea\\TPV_Elkartea\\Views\\TPVWindow.xaml",
               "RelativeToolTip": "TPV_Elkartea\\Views\\TPVWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-20T08:00:30.179Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-20T08:00:30.179Z"
             }
           ]
         }

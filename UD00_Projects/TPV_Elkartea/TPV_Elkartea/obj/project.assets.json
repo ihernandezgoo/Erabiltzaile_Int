@@ -440,11 +440,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Erabiltzaile_Int\\UD00_Projects\\TPV_Elkartea\\TPV_Elkartea\\TPV_Elkartea.csproj",
+      "projectUniqueName": "C:\\Users\\ik012982i18\\Videos\\Erabiltzaile_Int\\UD00_Projects\\TPV_Elkartea\\TPV_Elkartea\\TPV_Elkartea.csproj",
       "projectName": "TPV_Elkartea",
-      "projectPath": "D:\\Erabiltzaile_Int\\UD00_Projects\\TPV_Elkartea\\TPV_Elkartea\\TPV_Elkartea.csproj",
+      "projectPath": "C:\\Users\\ik012982i18\\Videos\\Erabiltzaile_Int\\UD00_Projects\\TPV_Elkartea\\TPV_Elkartea\\TPV_Elkartea.csproj",
       "packagesPath": "C:\\Users\\ik012982i18\\.nuget\\packages\\",
-      "outputPath": "D:\\Erabiltzaile_Int\\UD00_Projects\\TPV_Elkartea\\TPV_Elkartea\\obj\\",
+      "outputPath": "C:\\Users\\ik012982i18\\Videos\\Erabiltzaile_Int\\UD00_Projects\\TPV_Elkartea\\TPV_Elkartea\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
