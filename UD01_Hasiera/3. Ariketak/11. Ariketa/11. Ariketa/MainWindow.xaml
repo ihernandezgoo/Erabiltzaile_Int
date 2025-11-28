@@ -14,7 +14,7 @@
             <TextBox x:Name="txtAbizena2" Width="200"/>
 
             <Label Content="NAN Zenbakia"/>
-            <TextBox x:Name="txtNan" Width="200"/>
+            <TextBox x:Name="txtNan" Width="200" TextChanged="txtNan_TextChanged"/>
 
             <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
                 <Button Content="Onartu" Click="Onartu_Click" Margin="0,0,10,0"/>

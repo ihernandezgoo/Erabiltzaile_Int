@@ -1,7 +1,7 @@
 ﻿<Window x:Class="_10._Ariketa.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Visualizar imágenes" Height="500" Width="800">
+        Title="Irudiak ikusi" Height="520" Width="800">
     <Grid Margin="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -10,7 +10,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Label Content="MIS IMÁGENES"
+        <Label Content="NIRE IRUDIAK"
                Grid.Row="0"
                HorizontalAlignment="Center"
                FontSize="20"
@@ -24,7 +24,7 @@
             </Grid.ColumnDefinitions>
 
             <StackPanel Grid.Column="0" Orientation="Vertical">
-                <Label Content="1ª Fila"/>
+                <Label Content="1. Lerroa"/>
                 <ComboBox x:Name="ImagenComboBox"
                           Width="150"
                           SelectionChanged="ImagenComboBox_SelectionChanged">
@@ -34,7 +34,7 @@
                 </ComboBox>
             </StackPanel>
 
-            <!-- Imagen seleccionada -->
+            <!-- Hautatutako irudia -->
             <Image x:Name="SeleccionImagen"
                    Grid.Column="1"
                    HorizontalAlignment="Right"
@@ -44,22 +44,22 @@
                    Margin="20,0,0,0"/>
         </Grid>
 
-        <!-- Fila 2: CheckBox + Varias imágenes -->
+        <!-- 2. Lerroa: CheckBox + Hainbat irudi -->
         <Grid Grid.Row="2" Margin="0,10,0,20">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <!-- CheckBoxes -->
+            <!-- CheckBox-ak -->
             <StackPanel Grid.Column="0" Orientation="Vertical">
-                <Label Content="2ª Fila"/>
+                <Label Content="2. Lerroa"/>
                 <CheckBox x:Name="CheckImagen4" Content="4. Argazkia" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked"/>
                 <CheckBox x:Name="CheckImagen5" Content="5. Argazkia" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked"/>
                 <CheckBox x:Name="CheckImagen6" Content="6. Argazkia" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked"/>
             </StackPanel>
 
-            <!-- Imágenes de la segunda fila -->
+            <!-- Bigarren lerroaren irudiak -->
             <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
                 <Image x:Name="Fila2Imagen1" Width="180" Height="120" Stretch="Uniform" Margin="5"/>
                 <Image x:Name="Fila2Imagen2" Width="180" Height="120" Stretch="Uniform" Margin="5"/>
@@ -67,8 +67,8 @@
             </StackPanel>
         </Grid>
 
-        <!-- Botón SALIR -->
-        <Button Content="ATERA"
+        <!-- IRTEN botoia -->
+        <Button Content="IRTEN"
                 Grid.Row="3"
                 HorizontalAlignment="Right"
                 Width="100"

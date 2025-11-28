@@ -16,11 +16,10 @@ namespace DietCalculation
             const int bazkaria = 9;
             const double afaria = 15.5;
 
-            const double kmRate = 0.25;
-            const double viajeRate = 18; 
+            const double kmTasa = 0.25;
+            const double bidaiaTasa = 18; 
 
-            const double trabajoRate = 42; 
-
+            const double lanTasa = 42; 
 
 
             double total = 0;
@@ -30,16 +29,16 @@ namespace DietCalculation
 
             if (double.TryParse(txtKM.Text, out double km))
             {
-                total += km * kmRate; // 0.25 km
+                total += km * kmTasa; // 0.25 km
             }
             if (double.TryParse(txtHorasViaje.Text, out double horasViaje))
             {
-                total += horasViaje * viajeRate; // 18 per hour
+                total += horasViaje * bidaiaTasa; // 18 per hour
             }
 
             if (double.TryParse(txtHorasTrabajo.Text, out double horasTrabajo))
             {
-                total += horasTrabajo * trabajoRate; // 42 per hour
+                total += horasTrabajo * lanTasa; // 42 per hour
             }
 
             txtTotal.Text = total.ToString("C");

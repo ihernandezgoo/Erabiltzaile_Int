@@ -1,26 +1,26 @@
 ﻿<Window x:Class="DietCalculation.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Cálculo de Dietas" Height="450" Width="600">
+        Title="Dieten Kalkulua" Height="450" Width="600">
     <Canvas>
         <Border BorderBrush="LightGray" BorderThickness="1" Canvas.Left="20" Canvas.Top="20" Width="150" Height="100">
             <StackPanel Margin="5">
-                <TextBlock Text="Dietas" FontWeight="Bold" Margin="0,0,0,5"/>
-                <CheckBox x:Name="chkDesayuno" Content="Desayuno"/>
-                <CheckBox x:Name="chkComida" Content="Comida"/>
-                <CheckBox x:Name="chkCena" Content="Cena"/>
+                <TextBlock Text="Dietak" FontWeight="Bold" Margin="0,0,0,5"/>
+                <CheckBox x:Name="chkDesayuno" Content="Gosaria"/>
+                <CheckBox x:Name="chkComida" Content="Bazkaria"/>
+                <CheckBox x:Name="chkCena" Content="Afaria"/>
             </StackPanel>
         </Border>
 
         <Border BorderBrush="LightGray" BorderThickness="1" Canvas.Left="200" Canvas.Top="20" Width="180" Height="100">
             <StackPanel Margin="5">
-                <TextBlock Text="Viajes" FontWeight="Bold" Margin="0,0,0,5"/>
+                <TextBlock Text="Bidaiak" FontWeight="Bold" Margin="0,0,0,5"/>
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
                     <TextBlock Text="KM" Width="50"/>
                     <TextBox x:Name="txtKM" Width="100"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Horas" Width="50"/>
+                    <TextBlock Text="Orduak" Width="50"/>
                     <TextBox x:Name="txtHorasViaje" Width="100"/>
                 </StackPanel>
             </StackPanel>
@@ -28,19 +28,19 @@
 
         <Border BorderBrush="LightGray" BorderThickness="1" Canvas.Left="400" Canvas.Top="20" Width="150" Height="100">
             <StackPanel Margin="5">
-                <TextBlock Text="Trabajo" FontWeight="Bold" Margin="0,0,0,5"/>
+                <TextBlock Text="Lana" FontWeight="Bold" Margin="0,0,0,5"/>
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Horas" Width="50"/>
+                    <TextBlock Text="Orduak" Width="50"/>
                     <TextBox x:Name="txtHorasTrabajo" Width="80"/>
                 </StackPanel>
             </StackPanel>
         </Border>
 
-        <TextBlock Text="TOTAL" FontWeight="Bold" FontSize="16" Canvas.Left="400" Canvas.Top="300"/>
+        <TextBlock Text="GUZTIRA" FontWeight="Bold" FontSize="16" Canvas.Left="400" Canvas.Top="300"/>
         <TextBox x:Name="txtTotal" Canvas.Left="470" Canvas.Top="300" Width="80" Height="25" IsReadOnly="True" Background="#FFE0E0E0"/>
 
-        <Button x:Name="btnLimpiar" Content="Limpiar" Canvas.Left="100" Canvas.Top="350" Width="80" Height="30" Click="btnLimpiar_Click"/>
-        <Button x:Name="btnSalir" Content="Salir" Canvas.Left="250" Canvas.Top="350" Width="80" Height="30" Click="btnSalir_Click"/>
-        <Button x:Name="btnCalcular" Content="Calcular" Canvas.Left="400" Canvas.Top="350" Width="80" Height="30" Click="btnCalcular_Click"/>
+        <Button x:Name="btnLimpiar" Content="Garbitu" Canvas.Left="100" Canvas.Top="350" Width="80" Height="30" Click="btnLimpiar_Click"/>
+        <Button x:Name="btnSalir" Content="Irten" Canvas.Left="250" Canvas.Top="350" Width="80" Height="30" Click="btnSalir_Click"/>
+        <Button x:Name="btnCalcular" Content="Kalkulatu" Canvas.Left="400" Canvas.Top="350" Width="80" Height="30" Click="btnCalcular_Click"/>
     </Canvas>
 </Window>

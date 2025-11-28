@@ -18,36 +18,36 @@ namespace _10._Ariketa
         {
             if (ImagenComboBox.SelectedItem is ComboBoxItem selectedItem)
             {
-                string nombre = selectedItem.Content.ToString();
-                string fileName = "";
+                string izena = selectedItem.Content.ToString();
+                string fitxategiIzena = "";
 
-                switch (nombre)
+                switch (izena)
                 {
-                    case "1. Argazkia": fileName = "argazkia1.jpg"; break;
-                    case "2. Argazkia": fileName = "argazkia2.jpg"; break;
-                    case "3. Argazkia": fileName = "argazkia3.jpg"; break;
+                    case "1. Argazkia": fitxategiIzena = "argazkia1.jpg"; break;
+                    case "2. Argazkia": fitxategiIzena = "argazkia2.jpg"; break;
+                    case "3. Argazkia": fitxategiIzena = "argazkia3.jpg"; break;
                 }
 
-                SeleccionImagen.Source = CargarImagen(fileName);
+                SeleccionImagen.Source = KargatuIrudia(fitxategiIzena);
             }
         }
 
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
         {
-            Fila2Imagen1.Source = CheckImagen4.IsChecked == true ? CargarImagen("argazkia4.jpg") : null;
-            Fila2Imagen2.Source = CheckImagen5.IsChecked == true ? CargarImagen("argazkia5.jpg") : null;
-            Fila2Imagen3.Source = CheckImagen6.IsChecked == true ? CargarImagen("argazkia6.jpg") : null;
+            Fila2Imagen1.Source = CheckImagen4.IsChecked == true ? KargatuIrudia("argazkia4.jpg") : null;
+            Fila2Imagen2.Source = CheckImagen5.IsChecked == true ? KargatuIrudia("argazkia5.jpg") : null;
+            Fila2Imagen3.Source = CheckImagen6.IsChecked == true ? KargatuIrudia("argazkia6.jpg") : null;
         }
 
-        // Método auxiliar para cargar imágenes desde /argazkiak/
-        private BitmapImage CargarImagen(string nombreArchivo)
+        // Metodo laguntzailea irudiak /argazkiak/-tik kargatzeko
+        private BitmapImage KargatuIrudia(string fitxategiIzena)
         {
-            string ruta = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "argazkiak", nombreArchivo);
-            if (File.Exists(ruta))
+            string bidea = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "argazkiak", fitxategiIzena);
+            if (File.Exists(bidea))
             {
                 BitmapImage bmp = new BitmapImage();
                 bmp.BeginInit();
-                bmp.UriSource = new Uri(ruta, UriKind.Absolute);
+                bmp.UriSource = new Uri(bidea, UriKind.Absolute);
                 bmp.CacheOption = BitmapCacheOption.OnLoad;
                 bmp.EndInit();
                 return bmp;
@@ -55,7 +55,7 @@ namespace _10._Ariketa
             return null;
         }
 
-        // Botón salir
+        // Irten botoia
         private void Salir_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
