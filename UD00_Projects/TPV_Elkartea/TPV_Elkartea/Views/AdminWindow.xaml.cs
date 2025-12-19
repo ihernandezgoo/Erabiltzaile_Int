@@ -24,7 +24,7 @@ namespace TPV_Elkartea.Views
             dgUsuarios.ItemsSource = usuarios;
         }
 
-        #region Productos CRUD
+        #region Produktuen CRUD
 
         private void CargarProductos()
         {
@@ -51,7 +51,7 @@ namespace TPV_Elkartea.Views
 
         private void BtnAnadirProducto_Click(object sender, RoutedEventArgs e)
         {
-            var nuevo = new Producto { Nombre = "Producto nuevo", Precio = 0, Stock = 0, img = "" };
+            var nuevo = new Producto { Nombre = "Produktu berria", Precio = 0, Stock = 0, img = "" };
             using var conexion = new SqliteConnection($"Data Source={dbProductos}");
             conexion.Open();
             string query = "INSERT INTO Edariak (Nombre, Precio, Stock, img) VALUES (@nombre, @precio, @stock, @img); SELECT last_insert_rowid();";
@@ -68,7 +68,7 @@ namespace TPV_Elkartea.Views
         {
             if (dgProductos.SelectedItem is Producto p)
             {
-                if (MessageBox.Show($"¿Ezabatu {p.Nombre}?", "Konfirmatu", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                if (MessageBox.Show($"Ezabatu {p.Nombre}?", "Konfirmatu", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                 {
                     using var conexion = new SqliteConnection($"Data Source={dbProductos}");
                     conexion.Open();
@@ -103,7 +103,7 @@ namespace TPV_Elkartea.Views
 
         #endregion
 
-        #region Usuarios CRUD
+        #region Erabiltzaileen CRUD
 
         private void CargarUsuarios()
         {
@@ -162,7 +162,7 @@ namespace TPV_Elkartea.Views
         {
             if (dgUsuarios.SelectedItem is Erabiltzaileak u)
             {
-                if (MessageBox.Show($"¿Ezabatu {u.Izena}?", "Konfirmatu", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                if (MessageBox.Show($"Ezabatu {u.Izena}?", "Konfirmatu", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                 {
                     using var conexion = new SqliteConnection($"Data Source={dbUsuarios}");
                     conexion.Open();

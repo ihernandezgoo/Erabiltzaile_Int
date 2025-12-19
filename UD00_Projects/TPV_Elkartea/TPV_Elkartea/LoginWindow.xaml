@@ -16,7 +16,7 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <!-- Titulo -->
+        <!-- Izenburua -->
         <TextBlock Grid.Row="0" 
                    Text="Donostiako Elkartea" 
                    FontSize="24" 
@@ -24,7 +24,7 @@
                    HorizontalAlignment="Center" 
                    Margin="0,0,0,20"/>
 
-        <!-- Usuario -->
+        <!-- Erabiltzailea -->
         <StackPanel Grid.Row="2">
             <TextBlock Text="Erabiltzailea:" FontSize="14" Margin="0,0,0,5"/>
             <TextBox x:Name="tbUsuario" 
@@ -33,7 +33,7 @@
                      Padding="5"/>
         </StackPanel>
 
-        <!-- Contrasea -->
+        <!-- Pasahitza -->
         <StackPanel Grid.Row="4">
             <TextBlock Text="Pasahitza:" FontSize="14" Margin="0,0,0,5"/>
             <PasswordBox x:Name="pbContrasena" 
@@ -42,7 +42,7 @@
                          Padding="5"/>
         </StackPanel>
 
-        <!-- Boton -->
+        <!-- Botoia -->
         <Button Grid.Row="6" 
                 Content="Login" 
                 Height="40" 

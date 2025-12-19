@@ -19,7 +19,7 @@ namespace TPV_Elkartea.Services
         {
             var productos = new List<Producto>();
             if (!File.Exists(dbPath))
-                throw new FileNotFoundException("No se encontró la base de datos SQLite.", dbPath);
+                throw new FileNotFoundException("SQLite datu-basea ez da aurkitu.", dbPath);
 
             using var conexion = new SqliteConnection($"Data Source={dbPath}");
             conexion.Open();
@@ -45,7 +45,7 @@ namespace TPV_Elkartea.Services
         public void GuardarProductos(IEnumerable<Producto> productos)
         {
             if (!File.Exists(dbPath))
-                throw new FileNotFoundException("No se encontró la base de datos SQLite.", dbPath);
+                throw new FileNotFoundException("SQLite datu-basea ez da aurkitu.", dbPath);
 
             using var conexion = new SqliteConnection($"Data Source={dbPath}");
             conexion.Open();

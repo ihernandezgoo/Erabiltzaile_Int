@@ -51,16 +51,22 @@ namespace TPV_Elkartea
                     loginOk = true;
                     string rola = result.ToString();
 
+                    Window mainWindow;
                     if (rola.Equals("admin", StringComparison.OrdinalIgnoreCase))
                     {
-                        var admin = new AdminWindow();
-                        admin.Show();
+                        mainWindow = new AdminWindow();
                     }
                     else
                     {
-                        var tpv = new TPVWindow();
-                        tpv.Show();
+                        mainWindow = new TPVWindow(izena);
                     }
+
+                    // Leiho berria aplikazioaren leiho nagusi gisa ezarri
+                    Application.Current.MainWindow = mainWindow;
+                    mainWindow.Show();
+                    
+                    // Login leihoa itxi
+                    this.Close();
                 }
             }
             catch (Exception ex)

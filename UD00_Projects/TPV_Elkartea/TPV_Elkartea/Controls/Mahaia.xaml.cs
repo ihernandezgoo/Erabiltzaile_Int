@@ -9,9 +9,15 @@ namespace TPV_Elkartea.Controls
     {
         public enum EgoeraMota { Librea, Hautatua, Okupatua }
 
-        // DependencyProperty bien configurada
+        // DependencyProperty ondo konfiguratuta
         public static readonly DependencyProperty IdProperty =
             DependencyProperty.Register("Id", typeof(string), typeof(Mahaia), new PropertyMetadata(""));
+
+        public static readonly DependencyProperty ReservationNameProperty =
+            DependencyProperty.Register("ReservationName", typeof(string), typeof(Mahaia), new PropertyMetadata(""));
+
+        public static readonly DependencyProperty ReservationTimeProperty =
+            DependencyProperty.Register("ReservationTime", typeof(string), typeof(Mahaia), new PropertyMetadata(""));
 
         public string Id
         {
@@ -19,7 +25,24 @@ namespace TPV_Elkartea.Controls
             set => SetValue(IdProperty, value);
         }
 
+        public string ReservationName
+        {
+            get => (string)GetValue(ReservationNameProperty);
+            set => SetValue(ReservationNameProperty, value);
+        }
+
+        public string ReservationTime
+        {
+            get => (string)GetValue(ReservationTimeProperty);
+            set => SetValue(ReservationTimeProperty, value);
+        }
+
         public EgoeraMota Egoera { get; private set; } = EgoeraMota.Librea;
+        public string ErreserbaIzena { get; private set; } = "";
+        public string ErreserbaOrdua { get; private set; } = "";
+
+        // Mahaia klik egitean jakinarazteko gertaera
+        public event EventHandler<string>? MahaiaKlikatu;
 
         public Mahaia()
         {
@@ -38,6 +61,24 @@ namespace TPV_Elkartea.Controls
             EguneratuItxura();
         }
 
+        public void Erreserbatu(string izena, string ordua)
+        {
+            ErreserbaIzena = izena;
+            ErreserbaOrdua = ordua;
+            ReservationName = izena;
+            ReservationTime = ordua;
+            SetEgoera(EgoeraMota.Okupatua);
+        }
+
+        public void Askatu()
+        {
+            ErreserbaIzena = "";
+            ErreserbaOrdua = "";
+            ReservationName = "";
+            ReservationTime = "";
+            SetEgoera(EgoeraMota.Librea);
+        }
+
         private void EguneratuItxura()
         {
             switch (Egoera)
@@ -54,7 +95,7 @@ namespace TPV_Elkartea.Controls
 
                 case EgoeraMota.Okupatua:
                     SeatBorder.Background = Brushes.Red;
-                    IsEnabled = false;
+                    IsEnabled = true;
                     break;
             }
         }
@@ -73,14 +114,8 @@ namespace TPV_Elkartea.Controls
 
         private void SeatBorder_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            if (Egoera == EgoeraMota.Okupatua)
-                return;
-
-            // Alternar entre libre ↔ seleccionado
-            if (Egoera == EgoeraMota.Librea)
-                SetEgoera(EgoeraMota.Hautatua);
-            else if (Egoera == EgoeraMota.Hautatua)
-                SetEgoera(EgoeraMota.Librea);
+            // TPVWindow-k klik-a kudeatu dezan gertaera jaurti
+            MahaiaKlikatu?.Invoke(this, Id);
         }
     }
 }

@@ -6,6 +6,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using TPV_Elkartea.Models;
 using TPV_Elkartea.Services;
+using TPV_Elkartea.Controls;
 
 namespace TPV_Elkartea.Views
 {
@@ -17,10 +18,20 @@ namespace TPV_Elkartea.Views
 
         private readonly ProductoService productoService;
         private readonly UsuarioService usuarioService;
+        
+        private string usuarioActual;
+        private List<Mahaia> mahaiak = new List<Mahaia>();
 
-        public TPVWindow()
+        public TPVWindow() : this("Gonbidatua")
+        {
+        }
+
+        public TPVWindow(string erabiltzaileIzena)
         {
             InitializeComponent();
+
+            usuarioActual = erabiltzaileIzena;
+            tbUsuarioActual.Text = erabiltzaileIzena;
 
             string baseDir = System.AppDomain.CurrentDomain.BaseDirectory;
             productoService = new ProductoService(System.IO.Path.Combine(baseDir, "produktuak.db"));
@@ -28,9 +39,100 @@ namespace TPV_Elkartea.Views
 
             CargarProductos();
             CargarUsuarios();
+            InicializarSelectorHora();
+            InicializarMahaiak();
 
             dgCarrito.ItemsSource = carrito;
             ActualizarProductos();
+        }
+
+        private void InicializarSelectorHora()
+        {
+            // Orduak bete (12:00 - 23:00)
+            for (int i = 12; i <= 23; i++)
+            {
+                cbHoras.Items.Add(i.ToString("D2"));
+            }
+            cbHoras.SelectedIndex = 0;
+
+            // Minutuak bete (00, 15, 30, 45)
+            cbMinutos.Items.Add("00");
+            cbMinutos.Items.Add("15");
+            cbMinutos.Items.Add("30");
+            cbMinutos.Items.Add("45");
+            cbMinutos.SelectedIndex = 0;
+        }
+
+        private void InicializarMahaiak()
+        {
+            // 12 mahaia sortu
+            for (int i = 1; i <= 12; i++)
+            {
+                var mahaia = new Mahaia($"M{i}");
+                mahaia.MahaiaKlikatu += Mahaia_Klikatu;
+                mahaiak.Add(mahaia);
+                wpMahaiak.Children.Add(mahaia);
+            }
+        }
+
+        private void Mahaia_Klikatu(object? sender, string mahaiaId)
+        {
+            if (sender is Mahaia mahaia)
+            {
+                if (mahaia.Egoera == Mahaia.EgoeraMota.Librea)
+                {
+                    // Hautatutako ordua lortu
+                    string hora = cbHoras.SelectedItem?.ToString() ?? "12";
+                    string minutos = cbMinutos.SelectedItem?.ToString() ?? "00";
+                    string ordua = $"{hora}:{minutos}";
+
+                    // Mahaia erreserbatu
+                    var result = MessageBox.Show(
+                        $"{mahaiaId} mahaia erreserbatu nahi duzu {usuarioActual} izenarekin {ordua}(e)tan?",
+                        "Erreserbatu mahaia",
+                        MessageBoxButton.YesNo,
+                        MessageBoxImage.Question);
+
+                    if (result == MessageBoxResult.Yes)
+                    {
+                        mahaia.Erreserbatu(usuarioActual, ordua);
+                        MessageBox.Show($"{mahaiaId} mahaia erreserbatu da {ordua}(e)tan!", "Erreserbatuta", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
+                }
+                else if (mahaia.Egoera == Mahaia.EgoeraMota.Okupatua)
+                {
+                    // Erreserbaren informazioa erakutsi eta askatzeko aukera eman
+                    var result = MessageBox.Show(
+                        $"{mahaiaId} mahaia {mahaia.ErreserbaIzena}-(e)k erreserbatuta dago {mahaia.ErreserbaOrdua}(e)tan.\nAskatu nahi duzu?",
+                        "Mahaia okupatuta",
+                        MessageBoxButton.YesNo,
+                        MessageBoxImage.Information);
+
+                    if (result == MessageBoxResult.Yes)
+                    {
+                        mahaia.Askatu();
+                        MessageBox.Show($"{mahaiaId} mahaia askatu da!", "Askatuta", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
+                }
+            }
+        }
+
+        private void BtnGarbituMahaiak_Click(object sender, RoutedEventArgs e)
+        {
+            var result = MessageBox.Show(
+                "Mahaia guztiak askatu nahi dituzu?",
+                "Garbitu mahaiak",
+                MessageBoxButton.YesNo,
+                MessageBoxImage.Warning);
+
+            if (result == MessageBoxResult.Yes)
+            {
+                foreach (var mahaia in mahaiak)
+                {
+                    mahaia.Askatu();
+                }
+                MessageBox.Show("Mahaia guztiak askatu dira!", "Garbituta", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
         }
 
         private void CargarProductos()

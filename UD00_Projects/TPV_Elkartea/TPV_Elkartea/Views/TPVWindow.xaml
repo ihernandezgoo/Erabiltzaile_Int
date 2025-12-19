@@ -11,18 +11,19 @@
                         <ColumnDefinition Width="2*" />
                         <ColumnDefinition Width="3*" />
                     </Grid.ColumnDefinitions>
-                    <!-- Panel Productos -->
+                    <!-- Produktuen panela -->
                     <Border Grid.Column="0" Background="White" CornerRadius="12" Padding="15" Margin="5">
                         <Grid>
                             <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
-                                <ListBox x:Name="icProductos" SelectionMode="Single" BorderThickness="0" Background="Transparent"
+                                <ListView x:Name="icProductos" SelectionMode="Single" BorderThickness="0" Background="Transparent"
                                          MouseDoubleClick="icProductos_MouseDoubleClick">
-                                    <ListBox.ItemsPanel>
+                                    <ListView.ItemsPanel>
                                         <ItemsPanelTemplate>
                                             <UniformGrid Columns="2" />
                                         </ItemsPanelTemplate>
-                                    </ListBox.ItemsPanel>
-                                    <ListBox.ItemTemplate>
+                                    </ListView.ItemsPanel>
+
+                                    <ListView.ItemTemplate>
                                         <DataTemplate>
                                             <Border Width="160" Height="220" Margin="10" CornerRadius="12"
                                                     Background="White" Cursor="Hand" Padding="5">
@@ -44,12 +45,12 @@
                                                 </StackPanel>
                                             </Border>
                                         </DataTemplate>
-                                    </ListBox.ItemTemplate>
-                                </ListBox>
+                                    </ListView.ItemTemplate>
+                                </ListView>
                             </ScrollViewer>
                         </Grid>
                     </Border>
-                    <!-- Panel Carrito -->
+                    <!-- Karritoa panela -->
                     <Border Grid.Column="1" Background="White" CornerRadius="12" Padding="15" Margin="5">
                         <StackPanel>
                             <TextBlock Text="Karritoa" FontWeight="SemiBold" FontSize="15" Foreground="#333"/>
@@ -102,10 +103,44 @@
                 </Grid>
             </TabItem>
 
+            <!-- Erreserbak -->
             <TabItem Header="Erreserbak" x:Name="erreserbak">
-                <WrapPanel Margin="20" ItemWidth="70" ItemHeight="40">
-                    
-                </WrapPanel>
+                <Grid Margin="20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Erabiltzailearen goiburua -->
+                    <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,15" HorizontalAlignment="Center">
+                        <TextBlock Text="Erabiltzailea: " FontWeight="Bold" FontSize="16" VerticalAlignment="Center"/>
+                        <TextBlock x:Name="tbUsuarioActual" FontSize="16" Foreground="#2980B9" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                    </StackPanel>
+
+                    <!-- Ordu hautatzailea eta botoiak -->
+                    <Border Grid.Row="1" Background="White" CornerRadius="12" Padding="15" Margin="0,0,0,15">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <TextBlock Text="Erreserbaren ordua:" FontWeight="SemiBold" FontSize="14" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                            <ComboBox x:Name="cbHoras" Width="80" Height="35" FontSize="14" VerticalContentAlignment="Center" SelectedIndex="0"/>
+                            <TextBlock Text=":" FontWeight="Bold" FontSize="18" VerticalAlignment="Center" Margin="5,0"/>
+                            <ComboBox x:Name="cbMinutos" Width="80" Height="35" FontSize="14" VerticalContentAlignment="Center" SelectedIndex="0"/>
+                            
+                            <Button Content="Garbitu guztiak" Click="BtnGarbituMahaiak_Click" 
+                                    Margin="30,0,0,0" Background="#E74C3C" Foreground="White" 
+                                    FontWeight="Bold" Padding="10,5" BorderThickness="0" Cursor="Hand" Height="35"/>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Mahaien panela -->
+                    <Border Grid.Row="2" Background="White" CornerRadius="12" Padding="20">
+                        <ScrollViewer VerticalScrollBarVisibility="Auto">
+                            <WrapPanel x:Name="wpMahaiak" ItemWidth="80" ItemHeight="60" HorizontalAlignment="Center">
+                                <!-- Mahaiak dinamikoki gehituko dira -->
+                            </WrapPanel>
+                        </ScrollViewer>
+                    </Border>
+                </Grid>
             </TabItem>
         </TabControl>
     </Grid>
