@@ -30,9 +30,12 @@ CREATE TABLE "Erabiltzaileak" (
 	PRIMARY KEY("Id")
 )
 
-Erabiltzaileen sortutako kontuak
 
+Defektuz sortutako kontuak
+Admin rola:
 Admin, Admin
+
+Erabiltzaile rola:
 Ivan, Ivan
 
 2. Produktuak.db
